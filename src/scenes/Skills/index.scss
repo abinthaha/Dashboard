@@ -1,0 +1,49 @@
+@import "../../common/_variables";
+
+.skills {
+	padding: 10px $page_margin 50px;
+	.skill-wrapper {
+		display: flex;
+		align-items: flex-start;
+	    flex-wrap: wrap;
+	}
+	.each-skill-category {
+		display: inline-flex;
+		min-width: 33%;
+		max-width: 33%;
+		flex: 1;
+		flex-direction: column;
+		h2 {
+			margin-bottom: 0px;
+			margin-top: 30px;
+		}
+		ul {
+			padding-left: 15px;
+			list-style: none;
+		}
+	}
+	.each-skill {
+		display: flex;
+		flex-direction: column;
+		margin-top: 15px;
+		.skill-name {
+			font-size: 16px;
+		}
+	}
+	.rate-slider {
+		display: inline-block;
+		width: 90%;
+	    height: 5px;
+	    margin-top: 5px;
+	    background: #a3a3a3;
+	    position: relative;
+	    .rate-bar {
+	    	position: absolute;
+	    	background-color: $signature_red;
+	    	left: 0;
+	    	top: 0;
+	    	bottom: 0;
+	    	display: inline-block;
+	    }
+	}
+}

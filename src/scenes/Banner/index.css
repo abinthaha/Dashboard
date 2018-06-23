@@ -1,0 +1,52 @@
+.page-header {
+  margin: 0;
+  padding: 20px 8%;
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid;
+  border-bottom-color: #E52E2D;
+  overflow: hidden; }
+  .page-header .signature {
+    font-size: 27pt;
+    color: #E52E2D; }
+
+.banner {
+  padding: 20px 8%;
+  display: flex;
+  min-height: 700px;
+  background-image: url("../../assets/images/banner-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .banner .user-image {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 1px solid #E52E2D;
+    background-image: url("../../assets/images/user-pic.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; }
+  .banner h1 {
+    color: #fff;
+    font-size: 50px;
+    margin: 10px 0; }
+  .banner h2 {
+    color: #a3a3a3;
+    font-size: 40px;
+    margin: 10px 0; }
+  .banner .download-resume-btn {
+    color: #fff;
+    border: 1px solid #E52E2D;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease; }
+    .banner .download-resume-btn:hover {
+      background-color: #E52E2D; }

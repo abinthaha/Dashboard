@@ -1,0 +1,38 @@
+.skills {
+  padding: 10px 8% 50px; }
+  .skills .skill-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap; }
+  .skills .each-skill-category {
+    display: inline-flex;
+    min-width: 33%;
+    max-width: 33%;
+    flex: 1;
+    flex-direction: column; }
+    .skills .each-skill-category h2 {
+      margin-bottom: 0px;
+      margin-top: 30px; }
+    .skills .each-skill-category ul {
+      padding-left: 15px;
+      list-style: none; }
+  .skills .each-skill {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px; }
+    .skills .each-skill .skill-name {
+      font-size: 16px; }
+  .skills .rate-slider {
+    display: inline-block;
+    width: 90%;
+    height: 5px;
+    margin-top: 5px;
+    background: #a3a3a3;
+    position: relative; }
+    .skills .rate-slider .rate-bar {
+      position: absolute;
+      background-color: #E52E2D;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      display: inline-block; }

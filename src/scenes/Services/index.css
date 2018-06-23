@@ -1,0 +1,26 @@
+.services {
+  padding: 10px 8% 50px;
+  box-sizing: border-box; }
+  .services .service-wrapper {
+    display: flex;
+    flex-wrap: wrap; }
+  .services .each-service {
+    flex: 1;
+    min-width: 33%;
+    max-width: 33%;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .services .each-service:nth-child(1), .services .each-service:nth-child(2), .services .each-service:nth-child(3) {
+      border-bottom: 1px solid #a3a3a3; }
+    .services .each-service:nth-child(1), .services .each-service:nth-child(4) {
+      border-right: 1px solid #a3a3a3; }
+    .services .each-service:nth-child(3), .services .each-service:nth-child(6) {
+      border-left: 1px solid #a3a3a3; }
+    .services .each-service .fas, .services .each-service .far {
+      font-size: 40px;
+      color: #E52E2D; }
+    .services .each-service p {
+      text-align: center; }

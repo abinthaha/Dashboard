@@ -1,0 +1,66 @@
+@import "../../common/_variables";
+
+.page-header {
+	margin: 0;
+	padding: 20px $page_margin;
+	display: flex;
+	background: $white;
+    border-bottom: 1px solid;
+    border-bottom-color: $signature_red;
+    overflow: hidden;
+	.signature {
+	    font-size: 27pt;
+	    color: $signature_red;
+	}
+}
+.banner {
+	padding: 20px $page_margin;
+	display: flex;
+	min-height: 700px;
+	background-image: url('../../assets/images/banner-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.user-image {
+		display: inline-block;
+		height: 200px;
+		width: 200px;
+		border-radius: 50%;
+		border: 1px solid $signature_red;
+		background-image: url('../../assets/images/user-pic.jpg');
+	    background-size: cover;
+    	background-position: center center;
+	    background-repeat: no-repeat;
+
+	}
+    
+    h1 {
+    	color: $white;
+    	font-size: 50px;
+    	margin: 10px 0;
+    }
+    
+    h2 {
+    	color: $grey;
+    	font-size: 40px;
+    	margin: 10px 0;
+    }
+
+    .download-resume-btn {
+    	color: $white;
+    	border: 1px solid $signature_red;
+    	padding: 10px;
+    	margin-top: 10px;
+    	border-radius: 20px;
+    	cursor: pointer;
+    	transition: $transition_common;
+    	&:hover {
+    		background-color: $signature_red;
+    	}
+    }
+}
