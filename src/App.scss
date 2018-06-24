@@ -1,5 +1,14 @@
 @import "./common/_variables";
 
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	@media #{$mobile} {
+		font-size: 14px;
+	}
+}
 .signature {
     font-weight: bold;
     color: $signature_red;
@@ -13,7 +22,7 @@
 }
 .section-heading {
 	text-align: center;
-	font-size: 50px;
+	font-size: 3rem;
 }
 
 div, span, p, h1, h2, h3, h4, h5, h6, section {

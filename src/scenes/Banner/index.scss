@@ -9,8 +9,8 @@
     border-bottom-color: $signature_red;
     overflow: hidden;
 	.signature {
-	    font-size: 27pt;
-	    color: $signature_red;
+	    font-size: 1.6rem;
+	    cursor: pointer;
 	}
 }
 .banner {
@@ -41,13 +41,21 @@
     
     h1 {
     	color: $white;
-    	font-size: 50px;
+    	font-size: 3.125rem;
     	margin: 10px 0;
+    	text-align: center;
+    	.title {
+    		font-family: 'Dancing Script';
+    		@media #{$mobile} {
+    			display: block;
+    		}
+    	}
     }
     
     h2 {
     	color: $grey;
-    	font-size: 40px;
+    	font-size: 2.5rem;
+        text-align: center;
     	margin: 10px 0;
     }
 
@@ -59,8 +67,21 @@
     	border-radius: 20px;
     	cursor: pointer;
     	transition: $transition_common;
+        text-decoration: none;
     	&:hover {
     		background-color: $signature_red;
     	}
+    }
+    .quote {
+    	color: $white;
+    	font-family: 'Dancing Script';
+    	margin-top: 50px;
+    	font-size: 1.2rem;
+    }
+    .small-desc {
+        display: block;
+        margin-top: 20px;
+        color: $grey;
+        text-align: center;
     }
 }

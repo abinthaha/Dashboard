@@ -17,18 +17,15 @@ class Introduction extends Component {
         	</div>
         </div>
         <div className='each-section experience'>
-        	<h2>Experience</h2>
-        	<ul>
-        		<li className='company-name'>QBurst Technologies Pvt. Ltd. (2015 - Present)</li>
-        		<ol>
-        			<li>3 years work experience in React + Redux projects using best development practices.</li>
-        			<li>Designing, coding and modifying SEO friendly responsive web applications from layout to function and according to clients specifications.</li>
-        			<li>Integrate data from various back-end services and databases.</li>
-        			<li>Stay plugged into emerging technologies/industry trends and apply them into operations and activities.</li>
-        		</ol>
-        	</ul>
+        	<h2>My <span className="signature">Focus</span></h2>
+            <div className='content'>
+                Let's be honest and cut through the marketing fluff. You need a website that
+                <span className='highlight'> looks amazing </span>and
+                <span className='highlight'>actually works</span>. Bottom line, that's what
+                <span className='highlight'> I do</span>. And if you want to learn more about working with me, pick up the phone and give me a call (or email).
+            </div>
         </div>
-      </section>
+    </section>
     );
   }
 }

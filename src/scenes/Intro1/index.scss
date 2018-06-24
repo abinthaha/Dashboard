@@ -7,36 +7,30 @@
 		flex: 1;
 		min-width: 50%;
 		max-width: 50%;
-
 		.content {
 		    line-height: 1.8;
-		    font-size: 16px;
+		    font-size: 1rem;
 		    text-align: justify;
 		    padding-right: 50px;
-		}
-	}
-	.experience {
-		ul {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-			li {
-				line-height: 1.8;
-		    	font-size: 16px;
-		    	text-align: justify;
-		    	&.company-name {
-		    		font-weight: bold;
-		    		font-size: 18px;
-		    	}
-			}
-		}
-		ol {
-			margin-top: 15px;
-		    list-style: circle;
 		}
 	}
 	.highlight {
 		color: $signature_red;
 		font-weight: bold;
 	}
+	@media #{$mobile} {
+     	flex-direction: column;
+     	.each-section {
+			min-width: 100%;
+			max-width: 100%;
+			&:first-child {
+				border-bottom: 1px solid $grey;
+				margin-bottom: 10px;
+				padding-bottom: 30px;
+			}
+			.content {
+				padding-right: 0;
+			}
+     	}
+    }
 }

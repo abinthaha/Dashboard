@@ -1,0 +1,100 @@
+@import "../../common/_variables";
+
+.footer {
+	padding: 50px $page_margin;
+	background-color: #26262a;
+	color: $white;
+	h1 {
+		margin: 10px 0;
+		text-align: center;
+		.highlight {
+			font-family: 'Dancing Script';
+			color: $signature_red;
+		}
+	}
+	.mail-phone {
+		display: flex;
+		font-size: 1rem;
+        align-items: stretch;
+	    margin-top: 30px;
+		.item {
+			display: flex;
+			align-items: center;
+			padding: 0 0 10px 0;
+			color: $white;
+			text-decoration: none;
+			transition: $transition_common;
+			&:hover {
+				color: $signature_red;
+			}
+			.fa, .far, .fas {
+				margin-right: 10px;
+				font-size: 1.4rem;
+			}
+		}
+		.address {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			border-right: 1px solid $white;
+			padding-right: 30px;
+			margin-right: 30px;
+			span {
+	    		margin-bottom: 5px;
+			}
+		}
+		.connect {
+			ul {
+				list-style: none;
+				padding-left: 0;
+				margin-bottom: 0;
+				display: flex;
+				li {
+					flex: 1;
+					display: inline-flex;
+					a {
+						color: $white;
+						transition: $transition_common;
+						text-decoration: none;
+						&:hover {
+							color: $signature_red;
+							transform: rotate(360deg);
+						}
+					}
+					.fa, .far, .fas, .fab {
+						font-size: 1.4rem;
+					}
+				}
+			}
+		}
+		@media #{$mobile} {
+			flex-direction: column;
+			.connect, .address {
+				width: 100%;
+				text-align: center;
+			}
+			.item {
+				justify-content: center;
+			}
+			.connect {
+				ul li {
+					justify-content: center;
+				}
+			}
+			.address {
+				order: 2;
+				align-items: center;
+				border: none;
+			    margin-right: 0;
+			    padding-right: 0;
+				margin-top: 30px;
+			    flex-flow: wrap;
+			    justify-content: center;
+			    span {
+			    	margin-right: 5px;
+			    }
+			}
+		}
+	}
+}

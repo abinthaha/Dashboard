@@ -20,7 +20,28 @@
     .services .each-service:nth-child(3), .services .each-service:nth-child(6) {
       border-left: 1px solid #a3a3a3; }
     .services .each-service .fas, .services .each-service .far {
-      font-size: 40px;
+      font-size: 2.5rem;
       color: #E52E2D; }
     .services .each-service p {
       text-align: center; }
+    @media (min-width: 641px) and (max-width: 1023px) {
+      .services .each-service {
+        min-width: 50%;
+        max-width: 50%; }
+        .services .each-service:nth-child(4) {
+          border-bottom: 1px solid #a3a3a3; } }
+    @media (min-width: 320px) and (max-width: 640px) {
+      .services .each-service {
+        min-width: 100%;
+        max-width: 100%;
+        border: 0px solid; }
+        .services .each-service:not(:last-child) {
+          border-bottom: 1px solid #a3a3a3 !important; }
+        .services .each-service:nth-child(even) {
+          border-right: 1px solid #a3a3a3 !important; }
+        .services .each-service:nth-child(odd) {
+          border-left: 1px solid #a3a3a3 !important; }
+        .services .each-service:first-child {
+          border-width: 0px 0px 1px 0px !important; }
+        .services .each-service:last-child {
+          border-width: 0px 0px 0px 0px !important; } }

@@ -28,11 +28,39 @@
 		}
 
 		.fas, .far {
-			font-size: 40px;
+			font-size: 2.5rem;
 			color: $signature_red;
 		}
 		p {
 			text-align: center;
+		}
+
+		@media #{$tablet} {
+			min-width: 50%;
+			max-width: 50%;
+			&:nth-child(4) {
+				border-bottom: 1px solid $grey;
+			}
+		}
+		@media #{$mobile} {
+			min-width: 100%;
+			max-width: 100%;
+			border: 0px solid;
+			&:not(:last-child) {
+				border-bottom: 1px solid $grey !important;
+			}
+			&:nth-child(even) {
+				border-right: 1px solid $grey !important;
+			}
+			&:nth-child(odd) {
+				border-left: 1px solid $grey !important;
+			}
+			&:first-child {
+				border-width: 0px 0px 1px 0px !important;
+			}
+			&:last-child {
+				border-width: 0px 0px 0px 0px !important;
+			}
 		}
 	}
 }

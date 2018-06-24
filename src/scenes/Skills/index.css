@@ -12,16 +12,25 @@
     flex-direction: column; }
     .skills .each-skill-category h2 {
       margin-bottom: 0px;
-      margin-top: 30px; }
+      margin-top: 30px;
+      font-size: 1.3rem; }
     .skills .each-skill-category ul {
       padding-left: 15px;
       list-style: none; }
+    @media (min-width: 641px) and (max-width: 1023px) {
+      .skills .each-skill-category {
+        min-width: 50%;
+        max-width: 50%; } }
+    @media (min-width: 320px) and (max-width: 640px) {
+      .skills .each-skill-category {
+        min-width: 100%;
+        max-width: 100%; } }
   .skills .each-skill {
     display: flex;
     flex-direction: column;
     margin-top: 15px; }
     .skills .each-skill .skill-name {
-      font-size: 16px; }
+      font-size: 0.9rem; }
   .skills .rate-slider {
     display: inline-block;
     width: 90%;

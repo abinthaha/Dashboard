@@ -7,8 +7,8 @@
   border-bottom-color: #E52E2D;
   overflow: hidden; }
   .page-header .signature {
-    font-size: 27pt;
-    color: #E52E2D; }
+    font-size: 1.6rem;
+    cursor: pointer; }
 
 .banner {
   padding: 20px 8%;
@@ -34,11 +34,18 @@
     background-repeat: no-repeat; }
   .banner h1 {
     color: #fff;
-    font-size: 50px;
-    margin: 10px 0; }
+    font-size: 3.125rem;
+    margin: 10px 0;
+    text-align: center; }
+    .banner h1 .title {
+      font-family: 'Dancing Script'; }
+      @media (min-width: 320px) and (max-width: 640px) {
+        .banner h1 .title {
+          display: block; } }
   .banner h2 {
     color: #a3a3a3;
-    font-size: 40px;
+    font-size: 2.5rem;
+    text-align: center;
     margin: 10px 0; }
   .banner .download-resume-btn {
     color: #fff;
@@ -47,6 +54,17 @@
     margin-top: 10px;
     border-radius: 20px;
     cursor: pointer;
-    transition: all 0.3s ease; }
+    transition: all 0.3s ease;
+    text-decoration: none; }
     .banner .download-resume-btn:hover {
       background-color: #E52E2D; }
+  .banner .quote {
+    color: #fff;
+    font-family: 'Dancing Script';
+    margin-top: 50px;
+    font-size: 1.2rem; }
+  .banner .small-desc {
+    display: block;
+    margin-top: 20px;
+    color: #a3a3a3;
+    text-align: center; }

@@ -3,3 +3,24 @@
 .contact-me {
 	padding: 10px $page_margin 50px;
 }
+
+.experience {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			line-height: 1.8;
+	    	font-size: 1rem;
+	    	text-align: justify;
+	    	&.company-name {
+	    		font-weight: bold;
+	    		font-size: 1.125rem;
+	    	}
+		}
+	}
+	ol {
+		margin-top: 15px;
+	    list-style: circle;
+	}
+}

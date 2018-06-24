@@ -26,8 +26,8 @@ class Services extends Component {
         icon: 'far fa-copy',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula quis lectus rhoncus porttitor ac ut quam.'
       }, {
-        name: 'Custom Support',
-        icon: 'fas fa-cogs',
+        name: 'Video Training',
+        icon: 'far fa-file-video',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula quis lectus rhoncus porttitor ac ut quam.'
       }]
     }
