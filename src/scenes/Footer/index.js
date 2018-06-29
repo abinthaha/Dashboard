@@ -2,7 +2,40 @@ import React, { Component } from 'react';
 import './index.css';
 
 class App extends Component {
+    constructor(props) {
+        super();
+        this.state = {
+            links: [
+                {
+                    id: '01',
+                    icon: 'fab fa-github',
+                    link: 'https://github.com/abinthaha'
+                }, {
+                    id: '02',
+                    icon: 'fab fa-stack-overflow',
+                    link: 'https://stackoverflow.com/users/3315333/abinthaha'
+                }, {
+                    id: '03',
+                    icon: 'fab fa-linkedin',
+                    link: 'https://www.linkedin.com/in/abinthaha'
+                }, {
+                    id: '04',
+                    icon: 'fab fa-instagram',
+                    link: 'https://www.instagram.com/abinthaha'
+                }, {
+                    id: '05',
+                    icon: 'fab fa-codepen',
+                    link: 'https://codepen.io/abinthaha'
+                }
+            ]
+        }
+    }
   render() {
+    const links = this.state.links.map((item, index) => {
+        return (
+            <li key={item.id}><a href={item.link} target="_blank"><i className={item.icon}></i></a></li>
+        );
+    })
     return (
       <div className="footer">
         <h1>Get a website that <span className='highlight'>looks amazing</span> and <span className='highlight'>actually works</span></h1>
@@ -24,10 +57,7 @@ class App extends Component {
 		        	<span>+91 9447621294</span>
 	        	</a>
         		<ul>
-        			<li><a href='https://github.com/abinthaha'><i className='fab fa-github'></i></a></li>
-        			<li><a href='https://stackoverflow.com/users/3315333/abinthaha'><i className="fab fa-stack-overflow"></i></a></li>
-        			<li><a href='https://www.linkedin.com/in/abinthaha'><i className='fab fa-linkedin'></i></a></li>
-        			<li><a href='https://www.instagram.com/abinthaha/'><i className='fab fa-instagram'></i></a></li>
+                    {links}
         		</ul>
         	</div>
         </div>
