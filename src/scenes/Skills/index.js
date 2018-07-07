@@ -4,6 +4,7 @@ class Skills extends Component {
 	constructor(props) {
 		super();
 		this.state = {
+			isViewed: false,
 			skills: [
 				{
 					name: 'Frameworks/Library',
@@ -102,6 +103,13 @@ class Skills extends Component {
 			]
 		}
 	}
+	componentWillReceiveProps(nextProps) {
+	    const { isViewed } = nextProps;
+	    this.setState({
+	        ...this.state,
+	        isViewed
+	    })
+	}
 	render() {
 		const skills = this.state.skills.map((category, index) => {
 			return(
@@ -123,7 +131,7 @@ class Skills extends Component {
 			)
 		})
 		return (
-		  	<section className="skills even">
+		  	<section className={'skills even ' + (this.state.isViewed ? 'viewed' : '')} id={this.props.elId}>
 		  		<h1 className='section-heading'>My <span className='signature'>Skills</span></h1>
 		  		<div className='skill-wrapper'>
 		  			{skills}

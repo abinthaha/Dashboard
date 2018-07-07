@@ -2,17 +2,62 @@ import React, { Component } from 'react';
 import './index.css';
 
 class Banner extends Component {
+	constructor(props) {
+		super();
+		this.state = {
+			shouldNotify: false
+		}
+		this.handleCloseClick = this.handleCloseClick.bind(this);		
+	}
 
+	componentDidMount() {
+		setTimeout(function() {
+	        this.setState({shouldNotify: true})
+	    }.bind(this),500);
+        
+        setTimeout(function() {
+	        this.setState({shouldNotify: false})
+	    }.bind(this),10000);
+
+	    (() => {
+		  	'use strict';
+		  	// Page is loaded
+		  	const objects = document.getElementsByClassName('asyncImage');
+		  	Array.from(objects).map((item) => {
+		    	// Start loading image
+			    const img = new Image();
+			    img.src = item.dataset.src;
+			    // Once image is loaded replace the src of the HTML element
+		    	img.onload = () => {
+		      		item.classList.remove('asyncImage');
+		      		return item.nodeName === 'IMG' ? 
+		        		item.src = item.dataset.src :        
+		        		item.style.backgroundImage = `url(${item.dataset.src})`;
+		    		};
+		  		});
+		})();
+	}
+
+	handleCloseClick() {
+		this.setState({shouldNotify: false})
+	}
+  	
   	render() {
     	return (
-    		<section className='even'>
+    		<section className='even banner-wrapper' id={this.props.elId}>
+    			<span className={'notification ' + (this.state.shouldNotify ? 'active' : '')} >
+    				<span className='close-btn' onClick={ev => this.handleCloseClick()}>
+    					<i className='fa fa-times'></i>
+    				</span>
+    				<span className='content'>Yeah, I know! This is in gh-pages. Still looking for a nice domain. :)</span>
+    			</span>
 		    	<header className='page-header'>
 					<span className="signature">
 						Abinthaha
 					</span>
 		      	</header>
-		      	<div className='banner'>
-		      		<span className='user-image'></span>
+		      	<div className='banner asyncImage'>
+		      		<span className='user-image asyncImage'></span>
 		      		<h1><span className='title'>Hey, I'm</span> Abin Thaha Azeez</h1>
 		      		<h2>FRONT-END ENGINEER</h2>
 		      		<a download href='/src/assets/Abinthaha.pdf' className='download-resume-btn'>Download Resume</a>

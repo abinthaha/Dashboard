@@ -44,4 +44,8 @@
       left: 0;
       top: 0;
       bottom: 0;
-      display: inline-block; }
+      display: inline-block;
+      width: 0 !important;
+      transition: all 0.8s ease-out; }
+  .skills.viewed .rate-bar {
+    width: inherit !important; }

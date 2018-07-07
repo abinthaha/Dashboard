@@ -5,6 +5,7 @@ class Services extends Component {
   constructor(props) {
     super();
     this.state={
+      isViewed: false,
       services: [{
         name: 'Web Development',
         icon: 'fas fa-code',
@@ -32,6 +33,15 @@ class Services extends Component {
       }]
     }
   }
+
+  componentWillReceiveProps(nextProps) {
+      const { isViewed } = nextProps;
+      this.setState({
+          ...this.state,
+          isViewed
+      })
+  }
+
   render() {
     const services = this.state.services.map((service, index) => {
       return(
@@ -43,7 +53,7 @@ class Services extends Component {
       )
     })
     return (
-      <div className="services odd">
+      <div className={'services odd ' + (this.state.isViewed ? 'viewed' : '')} id={this.props.elId}>
         <h1 className='section-heading'>My <span className='signature'>Services</span></h1>
         <div className='service-wrapper'>
           {services}

@@ -4,7 +4,7 @@ import './index.css';
 class ContactMe extends Component {
   render() {
     return (
-      <section className="contact-me even">
+      <section className="contact-me even" id={this.props.elId}>
         <div className='wrapper'>
             <div className='each-section experience'>
 	        	<h2>My <span className="signature">Experience</span></h2>

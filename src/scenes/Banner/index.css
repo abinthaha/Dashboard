@@ -10,6 +10,40 @@
     font-size: 1.6rem;
     cursor: pointer; }
 
+.banner-wrapper {
+  position: relative;
+  overflow: hidden; }
+  .banner-wrapper .notification {
+    position: fixed;
+    z-index: 3;
+    background-color: #343134;
+    color: #fff;
+    padding: 20px;
+    text-align: right;
+    min-width: 300px;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 5px;
+    border: 2px solid #e3e3e3;
+    font-size: 0.8rem;
+    top: 10px;
+    right: -100%;
+    left: auto;
+    transition: all 1s ease; }
+    .banner-wrapper .notification.active {
+      right: 0%; }
+    .banner-wrapper .notification .close-btn {
+      cursor: pointer;
+      transition: all 0.3s ease; }
+      .banner-wrapper .notification .close-btn:hover {
+        color: #E52E2D;
+        transform: rotate(360deg); }
+    .banner-wrapper .notification .content {
+      flex: 1;
+      display: inline-flex;
+      justify-content: center; }
+
 .banner {
   padding: 20px 8%;
   display: flex;

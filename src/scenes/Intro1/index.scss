@@ -15,8 +15,8 @@
 		}
 	}
 	.highlight {
-		color: $signature_red;
 		font-weight: bold;
+		transition: $comp_load_transition;
 	}
 	@media #{$mobile} {
      	flex-direction: column;
@@ -32,5 +32,11 @@
 				padding-right: 0;
 			}
      	}
+    }
+    &.viewed {
+    	.highlight {
+    		color: $signature_red;
+    		font-size: 1.05rem;
+    	}
     }
 }

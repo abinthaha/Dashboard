@@ -37,7 +37,7 @@ class App extends Component {
         );
     })
     return (
-      <div className="footer">
+      <div className="footer" id={this.props.elId}>
         <h1>Get a website that <span className='highlight'>looks amazing</span> and <span className='highlight'>actually works</span></h1>
         <div className='mail-phone'>
         	<div className='address'>

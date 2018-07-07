@@ -53,6 +53,13 @@
 	    	top: 0;
 	    	bottom: 0;
 	    	display: inline-block;
+	    	width: 0 !important;
+	    	transition: $comp_load_transition;
 	    }
+	}
+	&.viewed {
+		.rate-bar {
+			width: inherit !important;
+		}
 	}
 }
