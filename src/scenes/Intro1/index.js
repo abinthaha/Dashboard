@@ -21,8 +21,8 @@ class Introduction extends Component {
         <div className='each-section'>
         	<h2>Hi! I'm <span className="signature">Abin Thaha</span></h2>
         	<div className='content'>
-        		<span className='highlight'>Creative web developer</span> offering about 
-        		<span className='highlight'> 3 years</span> of experience in designing and developing user interfaces, 
+        		<span className='highlight'>Creative web developer</span> offering 
+        		<span className='highlight'> 3+ years</span> of experience in designing and developing user interfaces, 
         		and integration with backend. Proven ability in optimising web functionality that improve
         		 data retrieval and workflow effeciancies. 
         		 Expert in interdepartmental coordination and communication. 

@@ -5,12 +5,19 @@ class Banner extends Component {
 	constructor(props) {
 		super();
 		this.state = {
-			shouldNotify: false
+			shouldNotify: false,
+			isGhPages: false
 		}
 		this.handleCloseClick = this.handleCloseClick.bind(this);		
 	}
 
 	componentDidMount() {
+		if(window.location.href.indexOf("github") > 0) {
+			this.setState({
+				...this.state,
+				isGhPages: true
+			})
+		}
 		setTimeout(function() {
 	        this.setState({shouldNotify: true})
 	    }.bind(this),500);
@@ -45,12 +52,17 @@ class Banner extends Component {
   	render() {
     	return (
     		<section className='even banner-wrapper' id={this.props.elId}>
-    			<span className={'notification ' + (this.state.shouldNotify ? 'active' : '')} >
-    				<span className='close-btn' onClick={ev => this.handleCloseClick()}>
-    					<i className='fa fa-times'></i>
-    				</span>
-    				<span className='content'>Yeah, I know! This is in gh-pages. Still looking for a nice domain. :)</span>
-    			</span>
+    			{
+    				this.state.isGhPages ? (
+    					<span className={'notification ' + (this.state.shouldNotify ? 'active' : '')}>
+		    				<span className='close-btn' onClick={ev => this.handleCloseClick()}>
+		    					<i className='fa fa-times'></i>
+		    				</span>
+		    				<span className='content'>Yeah, I know! This is in gh-pages. Still looking for a nice domain. :)</span>
+		    			</span>
+					) : ''
+    			}
+    			
 		    	<header className='page-header'>
 					<span className="signature">
 						Abinthaha
@@ -60,7 +72,7 @@ class Banner extends Component {
 		      		<span className='user-image asyncImage'></span>
 		      		<h1><span className='title'>Hey, I'm</span> Abin Thaha Azeez</h1>
 		      		<h2>FRONT-END ENGINEER</h2>
-		      		<a download href='/src/assets/Abinthaha.pdf' className='download-resume-btn'>Download Resume</a>
+		      		<a href='https://github.com/abinthaha/Dashboard/blob/master/src/assets/Abinthaha_resume.pdf' className='download-resume-btn' target="_blank">View Resume</a>
 		      		<span className='quote'>"Yes, I'm the CSS to your HTML"</span>
 		      		<span className='small-desc'>Specializing in building everything from small business sites to rich interactive web apps.</span>
 		      	</div>

@@ -13,7 +13,7 @@ class Skills extends Component {
 							name: 'Angular 2/4',
 							rating: 7
 						}, {
-							name: 'Ract + Redux',
+							name: 'React + Redux',
 							rating: 8.5
 						}, {
 							name: 'NodeJS',
@@ -121,7 +121,7 @@ class Skills extends Component {
 								<li key={'item'+skillIndex} className='each-skill'>
 									<span className='skill-name'>{skill.name}</span>
 									<span className='rate-slider'>
-										<span style={{ width: skill.rating * 10+"%" }} className='rate-bar'></span>
+										<span style={{ width: this.state.isViewed ? skill.rating * 10+"%" : 0 }} className='rate-bar'></span>
 									</span>
 								</li>
 							)
