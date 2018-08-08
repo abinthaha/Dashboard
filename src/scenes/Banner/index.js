@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
+import resumePdf from '../../assets/Abinthaha Azeez Resume.pdf'
 
 class Banner extends Component {
 	constructor(props) {
@@ -72,7 +73,7 @@ class Banner extends Component {
 		      		<span className='user-image asyncImage'></span>
 		      		<h1><span className='title'>Hey, I'm</span> Abin Thaha Azeez</h1>
 		      		<h2>FRONT-END ENGINEER</h2>
-		      		<a href='https://github.com/abinthaha/Dashboard/blob/master/src/assets/Abinthaha_resume.pdf' className='download-resume-btn' target="_blank">View Resume</a>
+		      		<a href={resumePdf} className='download-resume-btn' download>Download Resume</a>
 		      		<span className='quote'>"Yes, I'm the CSS to your HTML"</span>
 		      		<span className='small-desc'>Specializing in building everything from small business sites to rich interactive web apps.</span>
 		      	</div>

@@ -11,7 +11,7 @@
     padding: 35px 25px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center; }
     .services .each-service:nth-child(1), .services .each-service:nth-child(2), .services .each-service:nth-child(3) {
       border-bottom: 1px solid #a3a3a3; }
@@ -31,7 +31,7 @@
         max-width: 50%; }
         .services .each-service:nth-child(4) {
           border-bottom: 1px solid #a3a3a3; } }
-    @media (min-width: 320px) and (max-width: 640px) {
+    @media (max-width: 640px) {
       .services .each-service {
         min-width: 100%;
         max-width: 100%;

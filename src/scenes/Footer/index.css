@@ -52,7 +52,7 @@
             transform: rotate(360deg); }
         .footer .mail-phone .connect ul li .fa, .footer .mail-phone .connect ul li .far, .footer .mail-phone .connect ul li .fas, .footer .mail-phone .connect ul li .fab {
           font-size: 1.4rem; }
-    @media (min-width: 320px) and (max-width: 640px) {
+    @media (max-width: 640px) {
       .footer .mail-phone {
         flex-direction: column; }
         .footer .mail-phone .connect, .footer .mail-phone .address {

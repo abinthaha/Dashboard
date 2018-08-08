@@ -21,7 +21,7 @@
       .skills .each-skill-category {
         min-width: 50%;
         max-width: 50%; } }
-    @media (min-width: 320px) and (max-width: 640px) {
+    @media (max-width: 640px) {
       .skills .each-skill-category {
         min-width: 100%;
         max-width: 100%; } }

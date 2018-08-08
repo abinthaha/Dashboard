@@ -9,27 +9,27 @@ class Services extends Component {
       services: [{
         name: 'Web Development',
         icon: 'fas fa-code',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula quis lectus rhoncus porttitor ac ut quam.'
+        description: 'I can start the work of a website from scratch, building structure, integrating with any backend services or working and maintaining the existing ones.'
       }, {
         name: 'Web Design',
         icon: 'fas fa-laptop',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula quis lectus rhoncus porttitor ac ut quam.'
+        description: 'In the absense of designs, I came up with the best designs that suits the buisiness logic.'
       }, {
         name: 'Fully Responsive',
         icon: 'fas fa-mobile-alt',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula quis lectus rhoncus porttitor ac ut quam.'
+        description: 'Each and every site including hobby projects are made in a way that fully responsive in Mobile, Tablet, Desktop and other large devices.'
       }, {
         name: 'Well Documented',
         icon: 'far fa-file-alt',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula quis lectus rhoncus porttitor ac ut quam.'
+        description: "The code is maintained in a way where anyone else can easily understand what's written and the work flow."
       }, {
         name: 'Clean Code',
         icon: 'far fa-copy',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula quis lectus rhoncus porttitor ac ut quam.'
+        description: 'Well defined and clean code which is self explanatory in a very reusable manner.'
       }, {
         name: 'Video Training',
         icon: 'far fa-file-video',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula quis lectus rhoncus porttitor ac ut quam.'
+        description: 'The training will go over some great insights to help users understand how to get the most out of their site.'
       }]
     }
   }

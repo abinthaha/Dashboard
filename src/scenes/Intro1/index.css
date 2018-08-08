@@ -13,7 +13,7 @@
   .about-me .highlight {
     font-weight: bold;
     transition: all 0.8s ease-out; }
-  @media (min-width: 320px) and (max-width: 640px) {
+  @media (max-width: 640px) {
     .about-me {
       flex-direction: column; }
       .about-me .each-section {
