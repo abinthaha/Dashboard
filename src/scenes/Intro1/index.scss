@@ -9,9 +9,14 @@
 		max-width: 50%;
 		.content {
 		    line-height: 1.8;
-		    font-size: 1rem;
+		    font-size: $usual;
 		    text-align: justify;
-		    padding-right: 50px;
+		}
+		&:first-child {
+			padding-right: 25px;
+		}
+		&:last-child {
+			padding-left: 25px;
 		}
 	}
 	.highlight {
@@ -24,9 +29,13 @@
 			min-width: 100%;
 			max-width: 100%;
 			&:first-child {
+				padding-right: 0;
 				border-bottom: 1px solid $grey;
 				margin-bottom: 10px;
 				padding-bottom: 30px;
+			}
+			&:last-child {
+				padding-left: 0;
 			}
 			.content {
 				padding-right: 0;

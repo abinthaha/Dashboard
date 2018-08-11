@@ -11,16 +11,16 @@
 		padding: 0;
 		li {
 			line-height: 1.8;
-	    	font-size: 1rem;
 	    	text-align: justify;
 	    	&.company-name {
 	    		font-weight: bold;
-	    		font-size: 1.125rem;
+	    		font-size: $xlarge;
 	    	}
 		}
 	}
 	ol {
 		margin-top: 15px;
+		font-size: $usual;
 	    list-style: circle;
 	}
 }

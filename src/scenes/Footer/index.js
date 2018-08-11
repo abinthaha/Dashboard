@@ -33,11 +33,12 @@ class App extends Component {
   render() {
     const links = this.state.links.map((item, index) => {
         return (
-            <li key={item.id}><a href={item.link} target="_blank"><i className={item.icon}></i></a></li>
+            <li key={item.id}><a href={item.link} target='_blank'><i className={item.icon}></i></a></li>
         );
     })
     return (
       <div className="footer" id={this.props.elId}>
+        <div className='notification'>This entire page is in ReactJS and no external plugins used. Check my <a href='https://github.com/abinthaha/Dashboard/blob/master/package.json' target='_blank'>package</a></div>
         <h1>Get a website that <span className='highlight'>looks amazing</span> and <span className='highlight'>actually works</span></h1>
         <div className='mail-phone'>
         	<div className='address'>

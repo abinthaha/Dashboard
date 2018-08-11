@@ -1,9 +1,28 @@
 @import "../../common/_variables";
 
 .footer {
-	padding: 50px $page_margin;
+	padding: 100px $page_margin 50px;
 	background-color: #26262a;
 	color: $white;
+
+	position: relative;
+	.notification {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		padding: 20px $page_margin;
+		text-align: center;
+		background-color: $signature_red;
+		color: $white;
+		font-size: $small;
+		a {
+			color: $white;
+			text-decoration: none;
+			padding-bottom: 1px;
+			border-bottom: 1px dotted $white;
+		}
+	}
 	h1 {
 		margin: 10px 0;
 		text-align: center;
@@ -14,7 +33,7 @@
 	}
 	.mail-phone {
 		display: flex;
-		font-size: 1rem;
+		font-size: $small;
         align-items: stretch;
 	    margin-top: 30px;
 		.item {
@@ -29,7 +48,7 @@
 			}
 			.fa, .far, .fas {
 				margin-right: 10px;
-				font-size: 1.4rem;
+				font-size: $xxlarge;
 			}
 		}
 		.address {
@@ -63,7 +82,7 @@
 						}
 					}
 					.fa, .far, .fas, .fab {
-						font-size: 1.4rem;
+						font-size: $xxlarge;
 					}
 				}
 			}

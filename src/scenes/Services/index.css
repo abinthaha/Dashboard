@@ -24,6 +24,7 @@
       transition: all 0.8s ease-out;
       color: #E52E2D; }
     .services .each-service p {
+      font-size: 1rem;
       text-align: center; }
     @media (min-width: 641px) and (max-width: 1023px) {
       .services .each-service {

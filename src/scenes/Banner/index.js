@@ -3,30 +3,7 @@ import './index.css';
 import resumePdf from '../../assets/Abinthaha Azeez Resume.pdf'
 
 class Banner extends Component {
-	constructor(props) {
-		super();
-		this.state = {
-			shouldNotify: false,
-			isGhPages: false
-		}
-		this.handleCloseClick = this.handleCloseClick.bind(this);		
-	}
-
 	componentDidMount() {
-		if(window.location.href.indexOf("github") > 0) {
-			this.setState({
-				...this.state,
-				isGhPages: true
-			})
-		}
-		setTimeout(function() {
-	        this.setState({shouldNotify: true})
-	    }.bind(this),500);
-        
-        setTimeout(function() {
-	        this.setState({shouldNotify: false})
-	    }.bind(this),10000);
-
 	    (() => {
 		  	'use strict';
 		  	// Page is loaded
@@ -46,24 +23,9 @@ class Banner extends Component {
 		})();
 	}
 
-	handleCloseClick() {
-		this.setState({shouldNotify: false})
-	}
-  	
   	render() {
     	return (
     		<section className='even banner-wrapper' id={this.props.elId}>
-    			{
-    				this.state.isGhPages ? (
-    					<span className={'notification ' + (this.state.shouldNotify ? 'active' : '')}>
-		    				<span className='close-btn' onClick={ev => this.handleCloseClick()}>
-		    					<i className='fa fa-times'></i>
-		    				</span>
-		    				<span className='content'>Yeah, I know! This is in gh-pages. Still looking for a nice domain. :)</span>
-		    			</span>
-					) : ''
-    			}
-    			
 		    	<header className='page-header'>
 					<span className="signature">
 						Abinthaha

@@ -16,7 +16,7 @@
 		h2 {
 			margin-bottom: 0px;
 			margin-top: 30px;
-			font-size: 1.3rem;
+			font-size: $xlarge;;
 		}
 		ul {
 			padding-left: 15px;
@@ -36,7 +36,7 @@
 		flex-direction: column;
 		margin-top: 15px;
 		.skill-name {
-			font-size: 0.9rem;
+			font-size: $usual;
 		}
 	}
 	.rate-slider {
