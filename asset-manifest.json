@@ -1,9 +1,17 @@
 {
-  "main.css": "static/css/main.b5a8aa35.css",
-  "main.css.map": "static/css/main.b5a8aa35.css.map",
-  "main.js": "static/js/main.06b4c611.js",
-  "main.js.map": "static/js/main.06b4c611.js.map",
-  "static\\media\\Abinthaha Azeez Resume.pdf": "static/media/Abinthaha Azeez Resume.b6a5e477.pdf",
-  "static\\media\\banner-bg.jpg": "static/media/banner-bg.20a2aadd.jpg",
-  "static\\media\\user-pic.jpg": "static/media/user-pic.39b0a54d.jpg"
+  "files": {
+    "main.css": "/Dashboard/static/css/main.9c237805.chunk.css",
+    "main.js": "/Dashboard/static/js/main.1938f5f7.chunk.js",
+    "main.js.map": "/Dashboard/static/js/main.1938f5f7.chunk.js.map",
+    "runtime~main.js": "/Dashboard/static/js/runtime~main.48b7983d.js",
+    "runtime~main.js.map": "/Dashboard/static/js/runtime~main.48b7983d.js.map",
+    "static/js/2.9278174c.chunk.js": "/Dashboard/static/js/2.9278174c.chunk.js",
+    "static/js/2.9278174c.chunk.js.map": "/Dashboard/static/js/2.9278174c.chunk.js.map",
+    "index.html": "/Dashboard/index.html",
+    "precache-manifest.5c7c3e84503ccfe25211a902c190394b.js": "/Dashboard/precache-manifest.5c7c3e84503ccfe25211a902c190394b.js",
+    "service-worker.js": "/Dashboard/service-worker.js",
+    "static/css/main.9c237805.chunk.css.map": "/Dashboard/static/css/main.9c237805.chunk.css.map",
+    "static/media/Abin Thaha Azees - Resume.pdf": "/Dashboard/static/media/Abin Thaha Azees - Resume.c07ee871.pdf",
+    "static/media/index.css": "/Dashboard/static/media/user-pic.39b0a54d.jpg"
+  }
 }
