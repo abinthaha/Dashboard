@@ -47,5 +47,16 @@
       display: inline-block;
       width: 0;
       transition: all 0.8s ease-out; }
+      .skills .rate-slider .rate-bar:after {
+        display: inline-block;
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        top: -5px;
+        box-shadow: 1px 1px 5px 1px #bbb;
+        right: 0; }
   .skills.viewed .rate-bar {
     width: auto; }

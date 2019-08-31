@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import './index.css';
-import resumePdf from '../../assets/Abinthaha Azeez Resume.pdf'
+import resumePdf from '../../assets/Abin Thaha Azees - Resume.pdf';
 
 class Banner extends Component {
+
+	constructor(props) {
+		super(props);
+	}
+	
 	componentDidMount() {
 	    (() => {
 		  	'use strict';
@@ -21,6 +26,26 @@ class Banner extends Component {
 		    		};
 		  		});
 		})();
+
+		// this.showPositionTextChange();
+	}
+
+	showPositionTextChange() {
+		const that = this;
+		let index = 1;
+		setInterval(function() {
+			const { position } = that.state;
+			const trimText = position.slice(0, index);
+			if(index < position.length) {
+				index = index + 1;
+			} else {
+				index = index - 1;
+			}
+			that.setState({
+				...that.state,
+				showPosition: trimText
+			})
+		}, 200)
 	}
 
   	render() {
@@ -33,9 +58,9 @@ class Banner extends Component {
 		      	</header>
 		      	<div className='banner asyncImage'>
 		      		<span className='user-image asyncImage'></span>
-		      		<h1><span className='title'>Hey, I'm</span> Abin Thaha Azeez</h1>
-		      		<h2>FRONT-END ENGINEER</h2>
-		      		<a href={resumePdf} className='download-resume-btn' download="Abin Thaha Azeez Resume.pdf">Download Resume</a>
+		      		<h1><div className='title'>Hey, I'm</div> ABIN THAHA AZEES</h1>
+		      		<h2 className='position'></h2>
+		      		<a href={resumePdf} className='download-resume-btn' download="Abin Thaha Azees - Resume.pdf">Download Resume</a>
 		      		<span className='quote'>"Yes, I'm the CSS to your HTML"</span>
 		      		<span className='small-desc'>Specializing in building everything from small business sites to rich interactive web apps.</span>
 		      	</div>

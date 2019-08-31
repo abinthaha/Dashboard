@@ -1,6 +1,10 @@
 .contact-me {
   padding: 10px 8% 50px; }
 
+.experience h2 {
+  text-align: center;
+  font-size: 3rem; }
+
 .experience ul {
   list-style: none;
   margin: 0;
@@ -8,9 +12,15 @@
   .experience ul li {
     line-height: 1.8;
     text-align: justify; }
-    .experience ul li.company-name {
-      font-weight: bold;
-      font-size: 1.2rem; }
+    .experience ul li .company-name {
+      font-size: 1.1rem;
+      display: flex;
+      flex-direction: row; }
+      .experience ul li .company-name .time-period {
+        margin-left: 5px; }
+      @media (max-width: 640px) {
+        .experience ul li .company-name {
+          flex-direction: column; } }
 
 .experience ol {
   margin-top: 15px;

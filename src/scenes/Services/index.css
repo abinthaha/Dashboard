@@ -12,20 +12,44 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center; }
+    align-items: center;
+    overflow: hidden;
+    max-height: 290px;
+    transition: all 0.8s ease-out;
+    color: #000; }
     .services .each-service:nth-child(1), .services .each-service:nth-child(2), .services .each-service:nth-child(3) {
       border-bottom: 1px solid #a3a3a3; }
     .services .each-service:nth-child(1), .services .each-service:nth-child(4) {
       border-right: 1px solid #a3a3a3; }
     .services .each-service:nth-child(3), .services .each-service:nth-child(6) {
       border-left: 1px solid #a3a3a3; }
-    .services .each-service .fas, .services .each-service .far {
+    .services .each-service .fas,
+    .services .each-service .far {
       font-size: 2.5rem;
-      transition: all 0.8s ease-out;
+      transition: all 0.3s ease;
       color: #E52E2D; }
-    .services .each-service p {
+    .services .each-service .desc {
       font-size: 1rem;
-      text-align: center; }
+      text-align: center;
+      color: #333;
+      margin-top: 100px; }
+    .services .each-service .icon-wrapper {
+      margin-top: 40px; }
+    .services .each-service .service-name {
+      margin-top: 40px; }
+    .services .each-service .desc,
+    .services .each-service .icon-wrapper,
+    .services .each-service .service-name {
+      transition: all 0.3s ease; }
+    .services .each-service:hover {
+      background-color: #c1c1c1; }
+      .services .each-service:hover .desc,
+      .services .each-service:hover .icon-wrapper,
+      .services .each-service:hover .service-name {
+        margin-top: 15px; }
+      .services .each-service:hover .desc,
+      .services .each-service:hover .service-name {
+        color: #333; }
     @media (min-width: 641px) and (max-width: 1023px) {
       .services .each-service {
         min-width: 50%;
@@ -47,6 +71,23 @@
           border-width: 0px 0px 1px 0px !important; }
         .services .each-service:last-child {
           border-width: 0px 0px 0px 0px !important; } }
-  .services.viewed .fas, .services.viewed .far {
-    font-size: 2.5rem;
-    transform: rotate(720deg); }
+  .services.viewed .fas,
+  .services.viewed .far {
+    -webkit-animation-name: zigzag;
+    animation-name: zigzag;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: 2;
+    animation-iteration-count: 2;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear; }
+
+@keyframes zigzag {
+  from {
+    transform: scale(1, 1); }
+  50% {
+    transform: scale(1.5, 1.5); }
+  100% {
+    transform: scale(1, 1); } }

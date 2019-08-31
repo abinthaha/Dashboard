@@ -1,5 +1,10 @@
 @import "../../common/_variables";
 
+.highlight {
+	font-family: 'Dancing Script';
+	color: $signature_red;
+}
+
 .footer {
 	padding: 100px $page_margin 50px;
 	background-color: #26262a;
@@ -26,10 +31,6 @@
 	h1 {
 		margin: 10px 0;
 		text-align: center;
-		.highlight {
-			font-family: 'Dancing Script';
-			color: $signature_red;
-		}
 	}
 	.mail-phone {
 		display: flex;
@@ -78,7 +79,6 @@
 						text-decoration: none;
 						&:hover {
 							color: $signature_red;
-							transform: rotate(360deg);
 						}
 					}
 					.fa, .far, .fas, .fab {
@@ -116,4 +116,11 @@
 			}
 		}
 	}
+}
+.copyright-footer {
+	background-color: $black;
+	color: $white;
+	text-align: center;
+	padding: 20px 10px;
+	font-size: 13px;
 }

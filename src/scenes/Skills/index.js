@@ -10,23 +10,29 @@ class Skills extends Component {
 					name: 'Frameworks/Library',
 					items: [
 						{
-							name: 'Angular 2/4',
-							rating: 7
+							name: 'Angular 2+',
+							rating: 8
 						}, {
 							name: 'React + Redux',
 							rating: 8.5
 						}, {
-							name: 'NodeJS',
-							rating: 3
+							name: 'NodeJS + ExpressJS',
+							rating: 6
+						}, {
+							name: 'VueJS',
+							rating: 6
 						}, {
 							name: 'UnderscoreJS',
-							rating: 6
+							rating: 7
 						}, {
 							name: 'Bootstrap 3/4',
 							rating: 8
 						}, {
 							name: 'MaterialUI',
-							rating: 7
+							rating: 8
+						}, {
+							name: 'RxJS',
+							rating: 7.5
 						}
 					]
 				}, {
@@ -45,22 +51,34 @@ class Skills extends Component {
 							name: 'ES6',
 							rating: 8
 						}, {
+							name: 'SASS/SCSS',
+							rating: 9.5
+						}, {
 							name: 'TypeScript',
 							rating: 7
 						}, {
 							name: 'JSX',
 							rating: 8
+						}, {
+							name: 'Mongo DB',
+							rating: 6
 						}
 					]
 				}, {
-					name: 'Package Managers',
+					name: 'Social Media Integration',
 					items: [
 						{
-							name: 'NPM',
+							name: 'Facebook',
+							rating: 7
+						}, {
+							name: 'Google',
 							rating: 8
 						}, {
-							name: 'Yarn',
+							name: 'Twitter',
 							rating: 6
+						}, {
+							name: 'Microsoft',
+							rating: 7
 						}
 					]
 				}, {
@@ -78,25 +96,25 @@ class Skills extends Component {
 						}
 					]
 				}, {
-					name: 'Social Media Integration',
-					items: [
-						{
-							name: 'Facebbook',
-							rating: 7
-						}, {
-							name: 'Google',
-							rating: 8
-						}, {
-							name: 'Twitter',
-							rating: 6
-						}
-					]
-				}, {
 					name: 'Version Control',
 					items: [
 						{
 							name: 'Git',
+							rating: 8
+						}, {
+							name: 'TFS',
 							rating: 7
+						}
+					]
+				}, {
+					name: 'Package Managers',
+					items: [
+						{
+							name: 'NPM',
+							rating: 8
+						}, {
+							name: 'Yarn',
+							rating: 6
 						}
 					]
 				}

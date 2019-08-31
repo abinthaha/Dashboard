@@ -1,0 +1,158 @@
+@import '../../common/variables';
+
+.portfolio-wrapper {
+    padding: 10px $page_margin 50px;
+
+    h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+.flip-wrapper {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .flip-card {
+        background-color: transparent;
+        display: inline-block;
+        height: 250px;
+        transition: $transition_common;
+        width: 30%;
+        perspective: 1000px;
+        cursor: pointer;
+        margin: 10px;
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+            .flip-card-front,
+            .flip-card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                backface-visibility: hidden;
+                display: flex;
+            }
+
+            .flip-card-front {
+                background-color: #bbb;
+                color: black;
+                display: inline-block;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background-size: cover;
+                background-position: center center;
+                color: $white;
+            }
+
+            .flip-card-back {
+                background-color: #901514;
+                color: white;
+                transform: rotateY(180deg);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .project-name {
+                    flex: 1;
+                    display: flex;
+                    width: 100%;
+                    padding: 15px;
+                    font-size: 22px;
+                }
+
+                .links {
+                    padding: 10px 10px 20px;
+                }
+
+                .card-label {
+                    color: $white;
+                    text-decoration: none;
+                    font-size: 30px;
+                    margin: 5px;
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: $transition_common;
+
+                    &:hover {
+                        background-color: #E52E2D;
+                        -webkit-box-shadow: inset 0px 0px 104px 18px rgba(150, 33, 33, 1);
+                        -moz-box-shadow: inset 0px 0px 104px 18px rgba(150, 33, 33, 1);
+                        box-shadow: inset 0px 0px 104px 18px rgba(150, 33, 33, 1);
+                    }
+                }
+            }
+        }
+
+        &:hover .flip-card-inner {
+            transform: rotateY(180deg);
+
+            .card-label {
+                z-index: 0;
+            }
+        }
+
+        &:nth-child(1n) {
+            .flip-card-front {
+                background-image: url('../../assets/images/portfolio/KTM.PNG')
+            }
+        }
+
+        &:nth-child(2n) {
+            .flip-card-front {
+                background-image: url('../../assets/images/portfolio/Upcomer-Replication.PNG');
+            }
+        }
+
+        &:nth-child(3n) {
+            .flip-card-front {
+                background-image: url('../../assets/images/portfolio/Why-So-Serious.PNG');
+            }
+        }
+
+        &:nth-child(4n) {
+            .flip-card-front {
+                background-image: url('../../assets/images/portfolio/Movie-Listing.PNG');
+            }
+        }
+
+        &:nth-child(5n) {
+            .flip-card-front {
+                background-image: url('../../assets/images/portfolio/Scroll-Parallax.PNG');
+            }
+        }
+
+        &:nth-child(6n) {
+            .flip-card-front {
+                background-image: url('../../assets/images/portfolio/Bubble.PNG');
+            }
+        }
+
+        @media #{$tablet} {
+            width: 45%;
+        }
+
+        @media #{$mobile} {
+            width: 95%;
+        }
+    }
+}

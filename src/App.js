@@ -6,6 +6,7 @@ import Skills from './scenes/Skills';
 import Services from './scenes/Services';
 import ContactMe from './scenes/ContactMe';
 import Footer from './scenes/Footer';
+import Portfolio from './scenes/Portfolio';
 
 import ScrollWrapper from './common/scrollWrapper';
 
@@ -13,7 +14,7 @@ class App extends Component {
   constructor(props) {
     super();
     this.state = {
-      elements: ['banner', 'intro', 'skills', 'services', 'contactMe', 'footer'],
+      elements: ['banner', 'intro', 'skills', 'portfolio', 'services', 'contactMe', 'footer'],
       viewedComponents: {}
     }
     this.setCompOnView = this.setCompOnView.bind(this);
@@ -26,15 +27,6 @@ class App extends Component {
         [item.id]: true
       }
     }, () => {
-        // setTimeout(function() {
-        //      this.setState({
-        //         ...this.state,
-        //         viewedComponents: {
-        //           ...this.state.viewedComponents,
-        //           [item.id]: false
-        //         }
-        //     });
-        // }.bind(this), 5000);
     })
   }
   render() {
@@ -45,6 +37,7 @@ class App extends Component {
         <Introduction elId='intro' isViewed={this.state.viewedComponents.intro} />
         <Skills elId='skills' isViewed={this.state.viewedComponents.skills} />
         <Services elId='services' isViewed={this.state.viewedComponents.services} />
+        <Portfolio elId='portfolio' isViewed={this.state.viewedComponents.portfolio} />
         <ContactMe elId='contactMe' isViewed={this.state.viewedComponents.contactMe} />
         <Footer elId='footer' isViewed={this.state.viewedComponents.footer} />
       </div>

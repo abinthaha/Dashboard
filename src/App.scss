@@ -5,26 +5,41 @@ body {
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
+	line-height: 1.5;
+
 	@media #{$mobile} {
 		font-size: 14px;
 	}
 }
+
 .signature {
-    font-weight: bold;
-    color: $signature_red;
-    font-family: 'Dancing Script', cursive;
+	font-weight: bold;
+	color: $signature_red;
+	font-family: 'Dancing Script', cursive;
 }
+
 .even {
 	background-color: $even_bg;
 }
+
 .odd {
 	background-color: $white;
 }
+
 .section-heading {
 	text-align: center;
 	font-size: 3rem;
 }
 
-div, span, p, h1, h2, h3, h4, h5, h6, section {
+div,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+section {
 	box-sizing: border-box;
 }
