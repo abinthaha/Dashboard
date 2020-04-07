@@ -17,10 +17,10 @@ class Skills extends Component {
 							rating: 8.5
 						}, {
 							name: 'NodeJS + ExpressJS',
-							rating: 6
+							rating: 7
 						}, {
-							name: 'VueJS',
-							rating: 6
+							name: 'VueJS + Vuex',
+							rating: 8
 						}, {
 							name: 'UnderscoreJS',
 							rating: 7
@@ -57,10 +57,10 @@ class Skills extends Component {
 							name: 'TypeScript',
 							rating: 7
 						}, {
-							name: 'JSX',
+							name: 'JSX/TSX',
 							rating: 8
 						}, {
-							name: 'Mongo DB',
+							name: 'Mongo DB/SQL',
 							rating: 6
 						}
 					]
@@ -79,20 +79,6 @@ class Skills extends Component {
 						}, {
 							name: 'Microsoft',
 							rating: 7
-						}
-					]
-				}, {
-					name: 'Build Tools/Task Manager',
-					items: [
-						{
-							name: 'Webpack',
-							rating: 8
-						}, {
-							name: 'Gulp',
-							rating: 7
-						}, {
-							name: 'Grunt',
-							rating: 6
 						}
 					]
 				}, {
@@ -115,6 +101,48 @@ class Skills extends Component {
 						}, {
 							name: 'Yarn',
 							rating: 6
+						}
+					]
+				}, {
+					name: 'Operating System',
+					items: [
+						{
+							name: 'Ubuntu',
+							rating: 10
+						}, {
+							name: 'Windows',
+							rating: 9
+						}
+					]
+				}, {
+					name: 'Deployment',
+					items: [
+						{
+							name: 'Github',
+							rating: 8
+						}, {
+							name: 'Azure',
+							rating: 8
+						}, {
+							name: 'AWS',
+							rating: 7
+						}, {
+							name: 'Heroku',
+							rating: 6
+						}
+					]
+				}, {
+					name: 'Build Tools/Task Manager',
+					items: [
+						{
+							name: 'Webpack',
+							rating: 9.5
+						}, {
+							name: 'Gulp',
+							rating: 8
+						}, {
+							name: 'Grunt',
+							rating: 7
 						}
 					]
 				}
