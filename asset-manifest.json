@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Dashboard/static/css/main.a64c4cd0.chunk.css",
+    "main.css": "/Dashboard/static/css/main.0b24993c.chunk.css",
     "main.js": "/Dashboard/static/js/main.9769bb63.chunk.js",
     "main.js.map": "/Dashboard/static/js/main.9769bb63.chunk.js.map",
     "runtime-main.js": "/Dashboard/static/js/runtime-main.69d0bc6c.js",
@@ -8,9 +8,9 @@
     "static/js/2.205bb6f4.chunk.js": "/Dashboard/static/js/2.205bb6f4.chunk.js",
     "static/js/2.205bb6f4.chunk.js.map": "/Dashboard/static/js/2.205bb6f4.chunk.js.map",
     "index.html": "/Dashboard/index.html",
-    "precache-manifest.b41604f76cc39697983ffe8ec0326d89.js": "/Dashboard/precache-manifest.b41604f76cc39697983ffe8ec0326d89.js",
+    "precache-manifest.cccdb194c236f62e4f9fde6dd6627dfe.js": "/Dashboard/precache-manifest.cccdb194c236f62e4f9fde6dd6627dfe.js",
     "service-worker.js": "/Dashboard/service-worker.js",
-    "static/css/main.a64c4cd0.chunk.css.map": "/Dashboard/static/css/main.a64c4cd0.chunk.css.map",
+    "static/css/main.0b24993c.chunk.css.map": "/Dashboard/static/css/main.0b24993c.chunk.css.map",
     "static/js/2.205bb6f4.chunk.js.LICENSE.txt": "/Dashboard/static/js/2.205bb6f4.chunk.js.LICENSE.txt",
     "static/media/Abin Thaha Azees - Resume.pdf": "/Dashboard/static/media/Abin Thaha Azees - Resume.7ee4e605.pdf",
     "static/media/index.css": "/Dashboard/static/media/user-pic.39b0a54d.jpg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.69d0bc6c.js",
     "static/js/2.205bb6f4.chunk.js",
-    "static/css/main.a64c4cd0.chunk.css",
+    "static/css/main.0b24993c.chunk.css",
     "static/js/main.9769bb63.chunk.js"
   ]
 }
