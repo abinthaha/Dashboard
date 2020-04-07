@@ -3,10 +3,12 @@
 .services {
 	padding: 10px $page_margin 50px;
 	box-sizing: border-box;
+
 	.service-wrapper {
 		display: flex;
 		flex-wrap: wrap;
 	}
+
 	.each-service {
 		flex: 1;
 		min-width: 33%;
@@ -16,59 +18,136 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
+		overflow: hidden;
+		max-height: 290px;
+		transition: $comp_load_transition;
+		color: $black;
 
-		&:nth-child(1),&:nth-child(2),&:nth-child(3) {
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3) {
 			border-bottom: 1px solid $grey;
 		}
-		&:nth-child(1),&:nth-child(4) {
+
+		&:nth-child(1),
+		&:nth-child(4) {
 			border-right: 1px solid $grey;
 		}
-		&:nth-child(3),&:nth-child(6) {
+
+		&:nth-child(3),
+		&:nth-child(6) {
 			border-left: 1px solid $grey;
 		}
 
-		.fas, .far {
+		.fas,
+		.far {
 			font-size: 2.5rem;
-			transition: $comp_load_transition;
+			transition: $transition_common;
 			color: $signature_red;
 		}
-		p {
+
+		.desc {
 			font-size: $usual;
 			text-align: center;
+			color: #333;
+			margin-top: 100px;
+		}
+
+		.icon-wrapper {
+			margin-top: 40px;
+		}
+
+		.service-name {
+			margin-top: 40px;
+		}
+
+		.desc,
+		.icon-wrapper,
+		.service-name {
+			transition: $transition_common;
+		}
+
+		&:hover {
+			background-color: #c1c1c1;
+
+			.desc,
+			.icon-wrapper,
+			.service-name {
+				margin-top: 15px;
+			}
+
+			.desc,
+			.service-name {
+				color: #333;
+			}
 		}
 
 		@media #{$tablet} {
 			min-width: 50%;
 			max-width: 50%;
+
 			&:nth-child(4) {
 				border-bottom: 1px solid $grey;
 			}
 		}
+
 		@media #{$mobile} {
 			min-width: 100%;
 			max-width: 100%;
 			border: 0px solid;
+
 			&:not(:last-child) {
 				border-bottom: 1px solid $grey !important;
 			}
+
 			&:nth-child(even) {
 				border-right: 1px solid $grey !important;
 			}
+
 			&:nth-child(odd) {
 				border-left: 1px solid $grey !important;
 			}
+
 			&:first-child {
 				border-width: 0px 0px 1px 0px !important;
 			}
+
 			&:last-child {
 				border-width: 0px 0px 0px 0px !important;
 			}
 		}
 	}
+
 	&.viewed {
-		.fas, .far {
-			font-size: 2.5rem;
-			transform: rotate(720deg);
+
+		.fas,
+		.far {
+			// font-size: 2.5rem;
+			// transform: rotate(720deg);
+			-webkit-animation-name: zigzag;
+			animation-name: zigzag;
+			-webkit-animation-duration: 1s;
+			animation-duration: 1s;
+			-webkit-animation-iteration-count: 2;
+			animation-iteration-count: 2;
+			-webkit-animation-direction: alternate;
+			animation-direction: alternate;
+			-webkit-animation-timing-function: linear;
+			animation-timing-function: linear;
 		}
+	}
+}
+
+@keyframes zigzag {
+	from {
+		transform: scale(1, 1);
+	}
+
+	50% {
+		transform: scale(1.5, 1.5);
+	}
+
+	100% {
+		transform: scale(1, 1);
 	}
 }

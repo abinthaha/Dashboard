@@ -37,32 +37,37 @@ class App extends Component {
         );
     })
     return (
-      <div className="footer" id={this.props.elId}>
-        <div className='notification'>This entire page is in ReactJS and no external plugins used. Check my <a href='https://github.com/abinthaha/Dashboard/blob/master/package.json' target='_blank'>package</a></div>
-        <h1>Get a website that <span className='highlight'>looks amazing</span> and <span className='highlight'>actually works</span></h1>
-        <div className='mail-phone'>
-        	<div className='address'>
-        		<span>Kalaripparambil (H),</span>
-        		<span>Maniyarankudy P.O,</span>
-        		<span>Vazhathoppe,</span>
-        		<span>Idukki, Kerala</span>
-        		<span>PIN: 685602</span>
-        	</div>
-        	<div className='connect'>
-	        	<a href="mailto:iamabinthaha@gmail.com" className='item'>
-		        	<span><i className='far fa-envelope'></i></span>
-		        	<span>iamabinthaha@gmail.com</span>
-	        	</a>
-	        	<a href="tel:+91 9447621294" className='item'>
-		        	<span><i className='fas fa-mobile-alt'></i></span>
-		        	<span>+91 9447621294</span>
-	        	</a>
-        		<ul>
-                    {links}
-        		</ul>
-        	</div>
-        </div>
-      </div>
+        <section>
+            <div className="footer" id={this.props.elId}>
+                <div className='notification'>This entire page is in ReactJS and no external plugins used. Check my <a href='https://github.com/abinthaha/Dashboard/blob/master/package.json' target='_blank'>package</a></div>
+                <h1>Get a website that <span className='highlight'>looks amazing</span> and <span className='highlight'>actually works</span></h1>
+                <div className='mail-phone'>
+                    <div className='address'>
+                        <span>Kalaripparambil (H),</span>
+                        <span>Maniyarankudy P.O,</span>
+                        <span>Vazhathoppe,</span>
+                        <span>Idukki, Kerala</span>
+                        <span>PIN: 685602</span>
+                    </div>
+                    <div className='connect'>
+                        <a href="mailto:iamabinthaha@gmail.com" className='item'>
+                            <span><i className='far fa-envelope'></i></span>
+                            <span>iamabinthaha@gmail.com</span>
+                        </a>
+                        <a href="tel:+91 9447621294" className='item'>
+                            <span><i className='fas fa-mobile-alt'></i></span>
+                            <span>+91 9447621294</span>
+                        </a>
+                        <ul>
+                            {links}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <footer className='copyright-footer'>
+                Copyright © 2019 Hosted by <span className="">abinthaha</span>
+            </footer>
+        </section>
     );
   }
 }

@@ -3,49 +3,66 @@
 .about-me {
 	padding: 50px $page_margin 20px;
 	display: flex;
+
 	.each-section {
 		flex: 1;
 		min-width: 50%;
 		max-width: 50%;
-		.content {
-		    line-height: 1.8;
-		    font-size: $usual;
-		    text-align: justify;
+
+		.focus {
+			h2 {
+				font-size: 1.5rem;
+			}
 		}
+
+		.content {
+			line-height: 1.8;
+			font-size: $usual;
+			text-align: justify;
+		}
+
 		&:first-child {
 			padding-right: 25px;
 		}
+
 		&:last-child {
 			padding-left: 25px;
 		}
 	}
+
 	.highlight {
 		font-weight: bold;
 		transition: $comp_load_transition;
 	}
+
 	@media #{$mobile} {
-     	flex-direction: column;
-     	.each-section {
+		flex-direction: column;
+
+		.each-section {
 			min-width: 100%;
 			max-width: 100%;
+
 			&:first-child {
 				padding-right: 0;
 				border-bottom: 1px solid $grey;
 				margin-bottom: 10px;
 				padding-bottom: 30px;
 			}
+
 			&:last-child {
 				padding-left: 0;
 			}
+
 			.content {
 				padding-right: 0;
 			}
-     	}
-    }
-    &.viewed {
-    	.highlight {
-    		color: $signature_red;
-    		font-size: 1.05rem;
-    	}
-    }
+		}
+	}
+
+	&.viewed {
+		.highlight {
+			color: $signature_red;
+			font-size: 1.05rem;
+		}
+	}
 }

@@ -22,14 +22,14 @@ class Introduction extends Component {
         	<h2>Hi! I'm <span className="signature">Abin Thaha</span></h2>
         	<div className='content'>
         		<span className='highlight'>Creative web developer</span> offering 
-        		<span className='highlight'> 3+ years</span> of experience in designing and developing user interfaces, 
+        		<span className='highlight'> 4+ years</span> of experience in designing and developing user interfaces, 
         		and integration with backend. Proven ability in optimising web functionality that improve
         		 data retrieval and workflow effeciancies. 
         		 Expert in interdepartmental coordination and communication. 
         		 Works with <span className='highlight'>full integrity and zest</span> and <span className='highlight'>enthusiastic</span> about the work and upcoming technologies.
         	</div>
         </div>
-        <div className='each-section experience'>
+        <div className='each-section focus'>
         	<h2>My <span className="signature">Focus</span></h2>
             <div className='content'>
                 Let's be honest and cut through the marketing fluff. You need a website that

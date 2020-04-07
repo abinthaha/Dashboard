@@ -46,19 +46,19 @@ class Services extends Component {
     const services = this.state.services.map((service, index) => {
       return(
         <div key={index} className='each-service'>
-          <span><i className={service.icon}></i></span>
+          <span className='icon-wrapper'><i className={service.icon} aria-hidden="true"></i></span>
           <h2 className='service-name'>{service.name}</h2>
-          <p>{service.description}</p>
+          <p className='desc'>{service.description}</p>
         </div>
       )
     })
     return (
-      <div className={'services odd ' + (this.state.isViewed ? 'viewed' : '')} id={this.props.elId}>
+      <section className={'services odd ' + (this.state.isViewed ? 'viewed' : '')} id={this.props.elId}>
         <h1 className='section-heading'>My <span className='signature'>Services</span></h1>
         <div className='service-wrapper'>
           {services}
         </div>
-      </div>
+      </section>
     );
   }
 }
