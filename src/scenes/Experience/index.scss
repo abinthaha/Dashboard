@@ -27,6 +27,20 @@
         }
     }
 
+    @media #{$tablet} {
+        .experience .experience-wrapper .experience-item {
+            margin: 0 20px;
+
+            .label {
+                font-size: $large;
+            }
+
+            .experience-value {
+                font-size: $experience_mobile_size;
+            }
+        }
+    }
+
     @media #{$mobile} {
         padding: 20px 8%;
 
@@ -39,10 +53,6 @@
 
                 .label {
                     font-size: $usual;
-                }
-
-                .experience-value {
-                    font-size: $experience_mobile_size;
                 }
             }
         }
