@@ -5,9 +5,13 @@ class Introduction extends Component {
     constructor(props) {
         super();
         this.state = {
-            isViewed: false
+            isViewed: false,
         }
     }
+
+    componentDidMount() {
+    }
+
     componentWillReceiveProps(nextProps) {
         const { isViewed } = nextProps;
         this.setState({
@@ -15,15 +19,16 @@ class Introduction extends Component {
             isViewed
         })
     }
+
   render() {
+      const { experience } = this.state;
     return (
       <section className={'about-me odd ' + (this.state.isViewed ? 'viewed' : '')} id={this.props.elId}>
         <div className='each-section'>
         	<h2>Hi! I'm <span className="signature">Abin Thaha</span></h2>
         	<div className='content'>
-        		<span className='highlight'>Creative web developer</span> offering 
-        		<span className='highlight'> 4+ years</span> of experience in designing and developing user interfaces, 
-        		and integration with backend. Proven ability in optimising web functionality that improve
+        		<span className='highlight'>Creative web developer</span> offering experience in designing and developing user interfaces, 
+        		and integration with backend. Proven ability in optimising web lity that improve
         		 data retrieval and workflow effeciancies. 
         		 Expert in interdepartmental coordination and communication. 
         		 Works with <span className='highlight'>full integrity and zest</span> and <span className='highlight'>enthusiastic</span> about the work and upcoming technologies.

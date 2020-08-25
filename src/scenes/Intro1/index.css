@@ -11,6 +11,8 @@
       line-height: 1.8;
       font-size: 1rem;
       text-align: justify; }
+      .about-me .each-section .content .highlight {
+        font-size: 1.4rem; }
     .about-me .each-section:first-child {
       padding-right: 25px; }
     .about-me .each-section:last-child {
@@ -35,4 +37,4 @@
           padding-right: 0; } }
   .about-me.viewed .highlight {
     color: #E52E2D;
-    font-size: 1.05rem; }
+    font-size: 1.4rem; }

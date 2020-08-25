@@ -19,6 +19,10 @@
 			line-height: 1.8;
 			font-size: $usual;
 			text-align: justify;
+
+			.highlight {
+				font-size: $xxlarge;
+			}
 		}
 
 		&:first-child {
@@ -62,7 +66,7 @@
 	&.viewed {
 		.highlight {
 			color: $signature_red;
-			font-size: 1.05rem;
+			font-size: 1.4rem;
 		}
 	}
 }

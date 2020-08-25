@@ -9,6 +9,7 @@ import Footer from './scenes/Footer';
 import Portfolio from './scenes/Portfolio';
 
 import ScrollWrapper from './common/scrollWrapper';
+import Experience from './scenes/Experience';
 
 class App extends Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class App extends Component {
         <ScrollWrapper elements={this.state.elements} setCompOnView={this.setCompOnView} />
         <Banner elId='banner' isViewed={this.state.viewedComponents.banner} />
         <Introduction elId='intro' isViewed={this.state.viewedComponents.intro} />
+        <Experience elId='experience' isViewed={this.state.viewedComponents.intro} />
         <Skills elId='skills' isViewed={this.state.viewedComponents.skills} />
         <Services elId='services' isViewed={this.state.viewedComponents.services} />
         <Portfolio elId='portfolio' isViewed={this.state.viewedComponents.portfolio} />
