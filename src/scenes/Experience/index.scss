@@ -12,7 +12,7 @@
             flex-direction: column;
             align-items: center;
             margin: 0 50px;
-            
+
             .label {
                 text-transform: uppercase;
                 font-weight: 100;
@@ -23,6 +23,27 @@
                 font-size: $experience_size;
                 color: $black;
                 font-weight: 900;
+            }
+        }
+    }
+
+    @media #{$mobile} {
+        padding: 20px 8%;
+
+        .experience-wrapper {
+            flex-direction: column;
+            align-items: center;
+
+            .experience-item {
+                margin: 20px 0;
+
+                .label {
+                    font-size: $usual;
+                }
+
+                .experience-value {
+                    font-size: $experience_mobile_size;
+                }
             }
         }
     }
