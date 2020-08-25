@@ -1,24 +1,18 @@
 {
   "files": {
-    "main.css": "/Dashboard/static/css/main.0b24993c.chunk.css",
-    "main.js": "/Dashboard/static/js/main.d646f207.chunk.js",
-    "main.js.map": "/Dashboard/static/js/main.d646f207.chunk.js.map",
-    "runtime-main.js": "/Dashboard/static/js/runtime-main.69d0bc6c.js",
-    "runtime-main.js.map": "/Dashboard/static/js/runtime-main.69d0bc6c.js.map",
-    "static/js/2.205bb6f4.chunk.js": "/Dashboard/static/js/2.205bb6f4.chunk.js",
-    "static/js/2.205bb6f4.chunk.js.map": "/Dashboard/static/js/2.205bb6f4.chunk.js.map",
+    "main.css": "/Dashboard/static/css/main.93c98991.chunk.css",
+    "main.js": "/Dashboard/static/js/main.26678bae.chunk.js",
+    "main.js.map": "/Dashboard/static/js/main.26678bae.chunk.js.map",
+    "runtime~main.js": "/Dashboard/static/js/runtime~main.48b7983d.js",
+    "runtime~main.js.map": "/Dashboard/static/js/runtime~main.48b7983d.js.map",
+    "static/js/2.a48254be.chunk.js": "/Dashboard/static/js/2.a48254be.chunk.js",
+    "static/js/2.a48254be.chunk.js.map": "/Dashboard/static/js/2.a48254be.chunk.js.map",
     "index.html": "/Dashboard/index.html",
-    "precache-manifest.95f8b83aa58624ad19bc77d7331f56b2.js": "/Dashboard/precache-manifest.95f8b83aa58624ad19bc77d7331f56b2.js",
+    "precache-manifest.9ef581686bb7f99c7e5f0403ed62dfa4.js": "/Dashboard/precache-manifest.9ef581686bb7f99c7e5f0403ed62dfa4.js",
     "service-worker.js": "/Dashboard/service-worker.js",
-    "static/css/main.0b24993c.chunk.css.map": "/Dashboard/static/css/main.0b24993c.chunk.css.map",
-    "static/js/2.205bb6f4.chunk.js.LICENSE.txt": "/Dashboard/static/js/2.205bb6f4.chunk.js.LICENSE.txt",
-    "static/media/Abin Thaha Azees - Resume.pdf": "/Dashboard/static/media/Abin Thaha Azees - Resume.b6409d78.pdf",
+    "static/css/main.93c98991.chunk.css.map": "/Dashboard/static/css/main.93c98991.chunk.css.map",
+    "static/media/Abin Thaha Azees - Resume.pdf": "/Dashboard/static/media/Abin Thaha Azees - Resume.37c8335c.pdf",
+    "static/media/index.scss": "/Dashboard/static/media/Why-So-Serious.d1f5d0df.PNG",
     "static/media/index.css": "/Dashboard/static/media/user-pic.39b0a54d.jpg"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.69d0bc6c.js",
-    "static/js/2.205bb6f4.chunk.js",
-    "static/css/main.0b24993c.chunk.css",
-    "static/js/main.d646f207.chunk.js"
-  ]
+  }
 }

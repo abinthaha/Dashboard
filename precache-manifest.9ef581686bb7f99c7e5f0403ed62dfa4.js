@@ -1,31 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4a7c1c5d2dda88dfd89cdf827483c68b",
+    "revision": "f1ba56d11dae17542601fe0ab9735d54",
     "url": "/Dashboard/index.html"
   },
   {
-    "revision": "77d221bda3d220c7900f",
-    "url": "/Dashboard/static/css/main.0b24993c.chunk.css"
+    "revision": "11bb1f25ee13b92a40a3",
+    "url": "/Dashboard/static/css/main.93c98991.chunk.css"
   },
   {
-    "revision": "d319c1b44562b8b48fb1",
-    "url": "/Dashboard/static/js/2.205bb6f4.chunk.js"
+    "revision": "5f179d52b43f0ecc54eb",
+    "url": "/Dashboard/static/js/2.a48254be.chunk.js"
   },
   {
-    "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/Dashboard/static/js/2.205bb6f4.chunk.js.LICENSE.txt"
+    "revision": "11bb1f25ee13b92a40a3",
+    "url": "/Dashboard/static/js/main.26678bae.chunk.js"
   },
   {
-    "revision": "77d221bda3d220c7900f",
-    "url": "/Dashboard/static/js/main.9769bb63.chunk.js"
+    "revision": "02fd8e96ff0619532f87",
+    "url": "/Dashboard/static/js/runtime~main.48b7983d.js"
   },
   {
-    "revision": "34511e90ce77aa698796",
-    "url": "/Dashboard/static/js/runtime-main.69d0bc6c.js"
-  },
-  {
-    "revision": "7ee4e605ab9af2de15605840ab834c72",
-    "url": "/Dashboard/static/media/Abin Thaha Azees - Resume.7ee4e605.pdf"
+    "revision": "37c8335c597e35c417f0ec6000e0b1ad",
+    "url": "/Dashboard/static/media/Abin Thaha Azees - Resume.37c8335c.pdf"
   },
   {
     "revision": "0702ae597631cd0854bc84f6108bc662",
