@@ -61,7 +61,7 @@ class Banner extends Component {
 		      		<h1><div className='title'>Hey, I'm</div> ABIN THAHA AZEES</h1>
 		      		<h2 className='position'></h2>
 		      		<a href={resumePdf} className='download-resume-btn' download="Abin Thaha Azees - Resume.pdf">Download Resume</a>
-		      		<span className='quote'>"Yes, I'm the CSS to your HTML"</span>
+		      		<span className='quote'>"I'm the CSS to your HTML"</span>
 		      		<span className='small-desc'>Specializing in building everything from small business sites to rich interactive web apps.</span>
 		      	</div>
 	      	</section>
