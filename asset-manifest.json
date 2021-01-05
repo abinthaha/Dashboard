@@ -1,17 +1,24 @@
 {
   "files": {
-    "main.css": "/Dashboard/static/css/main.1522a580.chunk.css",
-    "main.js": "/Dashboard/static/js/main.ba483f53.chunk.js",
-    "main.js.map": "/Dashboard/static/js/main.ba483f53.chunk.js.map",
-    "runtime~main.js": "/Dashboard/static/js/runtime~main.48b7983d.js",
-    "runtime~main.js.map": "/Dashboard/static/js/runtime~main.48b7983d.js.map",
-    "static/js/2.a48254be.chunk.js": "/Dashboard/static/js/2.a48254be.chunk.js",
-    "static/js/2.a48254be.chunk.js.map": "/Dashboard/static/js/2.a48254be.chunk.js.map",
+    "main.css": "/Dashboard/static/css/main.d32977f2.chunk.css",
+    "main.js": "/Dashboard/static/js/main.ae17354a.chunk.js",
+    "main.js.map": "/Dashboard/static/js/main.ae17354a.chunk.js.map",
+    "runtime-main.js": "/Dashboard/static/js/runtime-main.e2c9115c.js",
+    "runtime-main.js.map": "/Dashboard/static/js/runtime-main.e2c9115c.js.map",
+    "static/js/2.98bd745c.chunk.js": "/Dashboard/static/js/2.98bd745c.chunk.js",
+    "static/js/2.98bd745c.chunk.js.map": "/Dashboard/static/js/2.98bd745c.chunk.js.map",
     "index.html": "/Dashboard/index.html",
-    "precache-manifest.618ce2f5a1130d0462f76423ad37f493.js": "/Dashboard/precache-manifest.618ce2f5a1130d0462f76423ad37f493.js",
+    "precache-manifest.c07cf0af517800ba0bff2b8f17c67d99.js": "/Dashboard/precache-manifest.c07cf0af517800ba0bff2b8f17c67d99.js",
     "service-worker.js": "/Dashboard/service-worker.js",
-    "static/css/main.1522a580.chunk.css.map": "/Dashboard/static/css/main.1522a580.chunk.css.map",
-    "static/media/Abin Thaha Azees - Resume.pdf": "/Dashboard/static/media/Abin Thaha Azees - Resume.37c8335c.pdf",
+    "static/css/main.d32977f2.chunk.css.map": "/Dashboard/static/css/main.d32977f2.chunk.css.map",
+    "static/js/2.98bd745c.chunk.js.LICENSE.txt": "/Dashboard/static/js/2.98bd745c.chunk.js.LICENSE.txt",
+    "static/media/Abin Thaha Azees - Resume.pdf": "/Dashboard/static/media/Abin Thaha Azees - Resume.8b5024be.pdf",
     "static/media/index.css": "/Dashboard/static/media/user-pic.39b0a54d.jpg"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2c9115c.js",
+    "static/js/2.98bd745c.chunk.js",
+    "static/css/main.d32977f2.chunk.css",
+    "static/js/main.ae17354a.chunk.js"
+  ]
 }
