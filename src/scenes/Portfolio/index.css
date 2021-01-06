@@ -3,6 +3,8 @@
   .portfolio-wrapper h2 {
     font-size: 3rem;
     text-align: center; }
+    .portfolio-wrapper h2 .signature {
+      font-size: 3rem; }
 
 .flip-wrapper {
   list-style: none;

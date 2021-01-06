@@ -79,6 +79,9 @@ class Skills extends Component {
 						}, {
 							name: 'Microsoft',
 							rating: 7
+						}, {
+							name: 'Google analytics',
+							rating: 8
 						}
 					]
 				}, {

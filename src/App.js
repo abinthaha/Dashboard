@@ -10,12 +10,13 @@ import Portfolio from './scenes/Portfolio';
 
 import ScrollWrapper from './common/scrollWrapper';
 import Experience from './scenes/Experience';
+import Achievements from './scenes/Achievements';
 
 class App extends Component {
   constructor(props) {
     super();
     this.state = {
-      elements: ['banner', 'intro', 'skills', 'portfolio', 'services', 'contactMe', 'footer'],
+      elements: ['banner', 'intro', 'skills', 'achievements', 'portfolio', 'services', 'contactMe', 'footer'],
       viewedComponents: {}
     }
     this.setCompOnView = this.setCompOnView.bind(this);
@@ -38,6 +39,7 @@ class App extends Component {
         <Introduction elId='intro' isViewed={this.state.viewedComponents.intro} />
         <Experience elId='experience' isViewed={this.state.viewedComponents.intro} />
         <Skills elId='skills' isViewed={this.state.viewedComponents.skills} />
+        <Achievements elId='achievements' isViewed={this.state.viewedComponents.achievements} />
         <Services elId='services' isViewed={this.state.viewedComponents.services} />
         <Portfolio elId='portfolio' isViewed={this.state.viewedComponents.portfolio} />
         <ContactMe elId='contactMe' isViewed={this.state.viewedComponents.contactMe} />

@@ -1,0 +1,139 @@
+@import '../../common/variables';
+
+$html_color: #8bc34a;
+$azure_color: #e30073;
+$ms365_color: #008fe3;
+$ga_color: #e37400;
+
+.achievement-wrapper {
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+
+    @media #{$tablet} {
+        justify-content: center;
+    }
+
+    @media #{$mobile} {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cert-item {
+        border-radius: 50%;
+        flex: 1;
+        max-width: 300px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        height: 300px;
+        transition: $transition_common;
+
+        @media #{$mid_screen} {
+            max-width: 250px;
+            height: 250px;
+        }
+
+        @media (min-width: 1024px) and (max-width: 1260px) {
+            max-width: 200px;
+            height: 200px;
+        }
+
+        @media #{$tablet} {
+            max-width: 200px;
+            min-width: 200px;
+            height: 200px;
+            margin: 15px;
+        }
+
+
+        @media #{$mobile} {
+            max-width: 200px;
+            min-width: 200px;
+            height: 200px;
+            margin: 15px;
+        }
+
+        .img-wrapper {
+            background-size: 70%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            border-radius: 50%;
+            background-position: center;
+        }
+
+        &.ga {
+            border: 6px solid $ga_color;
+
+            .img-wrapper {
+                background-image: url('../../assets/images/Achievements/Google\ analytics.png');
+            }
+        }
+
+        &.ms365 {
+            border: 6px solid $ms365_color;
+
+            .img-wrapper {
+                background-image: url('../../assets/images/Achievements/Microsoft365.png');
+            }
+        }
+
+        &.azure {
+            border: 6px solid $azure_color;
+
+            .img-wrapper {
+                background-image: url('../../assets/images/Achievements/Azure\ Fundamentals.png');
+            }
+        }
+
+        &.html {
+            border: 6px solid $html_color;
+
+            .img-wrapper {
+                background-image: url('../../assets/images/Achievements/HTML5.png');
+            }
+        }
+
+        .item-name {
+            position: absolute;
+            top: 100%;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            font-size: 1.2rem;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            color: #fff;
+            transition: $transition_common;
+        }
+
+        &.ga .item-name {
+            background-color: $ga_color;
+        }
+
+        &.ms365 .item-name {
+            background-color: $ms365_color;
+        }
+
+        &.azure .item-name {
+            background-color: $azure_color;
+        }
+
+        &.html .item-name {
+            background-color: $html_color;
+        }
+
+        &:hover {
+            .item-name {
+                top: 0;
+            }
+        }
+    }
+}

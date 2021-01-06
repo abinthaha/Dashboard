@@ -30,6 +30,9 @@ body {
 .section-heading {
 	text-align: center;
 	font-size: 3rem;
+	.signature {
+		font-size: 3rem;
+	}
 }
 
 div,
@@ -38,6 +41,8 @@ p,
 h1,
 h2,
 h3,
+ul,
+li,
 h4,
 h5,
 h6,
