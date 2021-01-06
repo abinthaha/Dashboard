@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c8b40b738d677727dca396349a536f13",
+    "revision": "6a2b4d0304bc68856484134176f5c67f",
     "url": "/Dashboard/index.html"
   },
   {
-    "revision": "45715ad396fefb9a1d1e",
-    "url": "/Dashboard/static/css/main.82c2f208.chunk.css"
+    "revision": "ed9bbf73d6ed57d19777",
+    "url": "/Dashboard/static/css/main.ac9b6c0c.chunk.css"
   },
   {
     "revision": "030d73bd3b24e586a2a3",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Dashboard/static/js/2.98bd745c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "45715ad396fefb9a1d1e",
-    "url": "/Dashboard/static/js/main.6f248799.chunk.js"
+    "revision": "ed9bbf73d6ed57d19777",
+    "url": "/Dashboard/static/js/main.11b4d9a0.chunk.js"
   },
   {
     "revision": "810ae0831f43523617ce",
@@ -28,12 +28,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Dashboard/static/media/Abin Thaha Azees - Resume.44599d68.pdf"
   },
   {
+    "revision": "76c0becf68517d645aea06e321438af4",
+    "url": "/Dashboard/static/media/Azure Fundamentals.76c0becf.png"
+  },
+  {
     "revision": "0702ae597631cd0854bc84f6108bc662",
     "url": "/Dashboard/static/media/Bubble.0702ae59.PNG"
   },
   {
+    "revision": "3d88b0603551ada3bcd8b160d4c997b5",
+    "url": "/Dashboard/static/media/Google analytics.3d88b060.png"
+  },
+  {
+    "revision": "d6c517d405458f99c72dac4b1a1fd7ec",
+    "url": "/Dashboard/static/media/HTML5.d6c517d4.png"
+  },
+  {
     "revision": "718de2a66faa3b84dcff62c829546c4b",
     "url": "/Dashboard/static/media/KTM.718de2a6.PNG"
+  },
+  {
+    "revision": "be74cb0ebb3ba781be48bffa3d18fbfd",
+    "url": "/Dashboard/static/media/Microsoft365.be74cb0e.png"
   },
   {
     "revision": "183c09ba291b77890849f13146b0ea2e",
