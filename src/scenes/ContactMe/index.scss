@@ -1,47 +1,57 @@
 @import "../../common/_variables";
 
 .contact-me {
-	padding: 10px $page_margin 50px;
+  padding: 10px $page_margin 50px;
 }
 
 .experience {
-	h2 {
-		text-align: center;
-		font-size: 3rem;
+  h2 {
+    text-align: center;
+    font-size: 3rem;
 
-		.signature {
-			font-size: 3rem;
-		}
-	}
+    .signature {
+      font-size: 3rem;
+    }
+  }
 
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-		li {
-			line-height: 1.8;
-			text-align: justify;
+    li {
+      line-height: 1.8;
+      text-align: justify;
+      .technologies {
+        margin-top: 20px;
+        color: #043c78;
+        span {
+          &:not(:last-child) {
+            &::after {
+              content: ", ";
+            }
+          }
+        }
+      }
 
-			.company-name {
-				font-size: $large;
-				display: flex;
-				flex-direction: row;
+      .company-name {
+        font-size: $large;
+        display: flex;
+        flex-direction: row;
 
-				.time-period {
-					margin-left: 5px;
-				}
+        .time-period {
+          margin-left: 10px;
+        }
 
-				@media #{$mobile} {
-					flex-direction: column;
-				}
-			}
-		}
-	}
+        @media #{$mobile} {
+          flex-direction: column;
+        }
+      }
+    }
+  }
 
-	ol {
-		margin-top: 15px;
-		font-size: $usual;
-		list-style: circle;
-	}
+  ol {
+    margin-top: 15px;
+    list-style: circle;
+  }
 }

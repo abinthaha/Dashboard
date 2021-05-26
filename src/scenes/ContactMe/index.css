@@ -14,17 +14,21 @@
   .experience ul li {
     line-height: 1.8;
     text-align: justify; }
+    .experience ul li .technologies {
+      margin-top: 20px;
+      color: #043c78; }
+      .experience ul li .technologies span:not(:last-child)::after {
+        content: ", "; }
     .experience ul li .company-name {
       font-size: 1.1rem;
       display: flex;
       flex-direction: row; }
       .experience ul li .company-name .time-period {
-        margin-left: 5px; }
+        margin-left: 10px; }
       @media (max-width: 640px) {
         .experience ul li .company-name {
           flex-direction: column; } }
 
 .experience ol {
   margin-top: 15px;
-  font-size: 1rem;
   list-style: circle; }

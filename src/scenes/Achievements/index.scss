@@ -28,7 +28,6 @@ $ga_color: #e37400;
         position: relative;
         overflow: hidden;
         cursor: pointer;
-        height: 300px;
         transition: $transition_common;
 
         @media #{$mid_screen} {
@@ -44,7 +43,7 @@ $ga_color: #e37400;
         @media #{$tablet} {
             max-width: 200px;
             min-width: 200px;
-            height: 200px;
+            min-height: 200px;
             margin: 15px;
         }
 
@@ -52,7 +51,7 @@ $ga_color: #e37400;
         @media #{$mobile} {
             max-width: 200px;
             min-width: 200px;
-            height: 200px;
+            min-height: 200px;
             margin: 15px;
         }
 
@@ -64,6 +63,7 @@ $ga_color: #e37400;
             display: inline-block;
             border-radius: 50%;
             background-position: center;
+            position: absolute;
         }
 
         &.ga {
