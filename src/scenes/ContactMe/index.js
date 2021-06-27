@@ -1,42 +1,92 @@
-import React, { Component } from 'react';
-import './index.css';
+import React, { Component } from "react";
+import "./index.css";
 
+const workExperience = [
+  {
+    companyName: "Kloud9",
+    companyUrl: "http://kloud9.nyc/",
+    jobRole: "Senior Software Engineer",
+    duration: "May, 2021 - Present",
+    technologies: [
+      "HTML5", "CSS3", "SCSS", "JavaScript", "Angular 4", "Angular 7", "React", "Redux", "TypeScript"
+    ],
+    responsibilities: [
+      "Develops software solutions by studying information needs, conferring with users, studying systems flow, data usage, and work processes; investigating problem areas; and following the software development lifecycle.",
+      "Determines operational feasibility by evaluating analysis, problem definition, requirements, solution development, and proposed solutions.",
+      "Documents and demonstrates solutions by developing documentation, flowcharts, layouts, diagrams, charts, code comments, and clear code.",
+      "Prepares and installs solutions by determining and designing system specifications, standards, and programming.",
+      "Improves operations by conducting systems analysis and recommending changes in policies and procedures.",
+      "Updates job knowledge by studying state-of-the-art development tools, programming techniques, and computing equipment, and by participating in educational opportunities, reading professional publications, maintaining personal networks, and participating in professional organizations.",
+      "Protects operations by keeping information confidential.",
+      "Provides information by collecting, analyzing, and summarizing development and service issues.",
+      "Accomplishes engineering and organization mission by completing related results as needed.",
+      "Supports and develops software engineers by providing advice, coaching, and educational opportunities.",
+    ],
+  },
+  {
+    companyName: "Ernst & Young",
+    companyUrl: "https://www.ey.com/en_in",
+    jobRole: "Senior Software Engineer",
+    duration: "February, 2019 - May, 2021",
+    technologies: [
+      "HTML5", "CSS3", "SCSS", "JavaScript", "Angular 7", "React", "Redux", "TypeScript", "React-router"
+    ],
+    responsibilities: [
+      "Designing highly efficient architecture and workflows for projects.",
+      "Choosing the best frameworks/libraries according to the client requirement.",
+      "Extending my service to multiple projects and mentoring junior developers with best industrial methods.",
+      "Helping colleagues to solve blockers by providing efficient solution.",
+      "Reviewing the code of colleagues before deploying and make sure the codes are using best industrial methods.",
+      "Stay plugged into the emerging technologies/industry trends and apply them into operations and activities",
+    ],
+  },
+  {
+    companyName: "QBurst Technologies",
+    companyUrl: "https://www.qburst.com/",
+    jobRole: "Senior Software Developer",
+    duration: "July, 2015 - January, 2019",
+    technologies: [
+      "HTML5", "CSS3", "SCSS", "JavaScript", "TypeScript", "React", "Redux", "Redux-toolkit", "Reach-router"
+    ],
+    responsibilities: [
+      "Designing, coding and modifying SEO friendly responsive web applications from layout to function and according to clients specifications.",
+      "Integrate data from various back-end services and databases.",
+      "End to end testing the application, creating dev test reports before delivering any tasks to the client to ensure that the application is bug free.",
+      "Peer to peer code review of colleagues, share best industrial practices",
+    ],
+  },
+];
 class ContactMe extends Component {
   render() {
     return (
       <section className="contact-me odd" id={this.props.elId}>
-        <div className='wrapper'>
-            <div className='each-section experience'>
-	        	<h2>My <span className="signature">Experience</span></h2>
-	            <ul>
-	        		<li>
-                <h4 className='company-name'>
-                  <span>Senior Software Engineer - EY Global</span>
-                  <span className='time-period'>(2019 February - Present)</span>
-                </h4>
-                <ol>
-                  <li>Designing highly efficient architecture and workflows for projects.</li>
-                  <li>Choosing the best frameworks/libraries according to the client requirement.</li>
-                  <li>Extending my service to multiple projects and mentoring junior developers with best industrial methods.</li>
-                  <li>Helping colleagues to solve blockers by providing efficient solution.</li>
-                  <li>Reviewing the code of colleagues before deploying and make sure the codes are using best industrial methods.</li>
-                  <li>Stay plugged into the emerging technologies/industry trends and apply them into operations and activities</li>
-                </ol>
-              </li>
-              <li>
-                <h4 className='company-name'>
-                  <span>Senior Software Engineer - QBurst Technologies Pvt. Ltd.</span>
-                  <span className='time-period'>(2015 July - 2019 January)</span>
-                </h4>
-                <ol>
-                  <li>Designing, coding and modifying SEO friendly responsive web applications from layout to function and according to clients specifications.</li>
-                  <li>Integrate data from various back-end services and databases.</li>
-                  <li>End to end testing the application, creating dev test reports before delivering any tasks to the client to ensure that the application is bug free.</li>
-                  <li>Peer to peer code review of colleagues, share best industrial practices. </li>
-                </ol>
-              </li>
-	        	</ul>
-            </div>
+        <div className="wrapper">
+          <div className="each-section experience">
+            <h2>
+              My <span className="signature">Experience</span>
+            </h2>
+            <ul>
+              {workExperience.map((work, index) => {
+                return (
+                  <li key={index}>
+                    <h4 className="company-name">
+                      <span>
+                        {work.jobRole} - <a target="_blank" href={work.companyUrl}>{work.companyName}</a>
+                      </span>
+                      <span className="time-period">({work.duration})</span>
+                    </h4>
+                    <ol>
+                      {work.responsibilities.map((responsibility, index) => {
+                        return <li key={index}>{responsibility}</li>;
+                      })}
+                    </ol>
+                    <h4 className='technologies'>Technologies used: {work.technologies.map(tech => <span>{tech}</span>)}</h4>
+
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       </section>
     );
