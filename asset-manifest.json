@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/Dashboard/static/css/main.815c2080.chunk.css",
-    "main.js": "/Dashboard/static/js/main.986eb944.chunk.js",
-    "main.js.map": "/Dashboard/static/js/main.986eb944.chunk.js.map",
+    "main.js": "/Dashboard/static/js/main.d273a30d.chunk.js",
+    "main.js.map": "/Dashboard/static/js/main.d273a30d.chunk.js.map",
     "runtime-main.js": "/Dashboard/static/js/runtime-main.e2c9115c.js",
     "runtime-main.js.map": "/Dashboard/static/js/runtime-main.e2c9115c.js.map",
     "static/js/2.98bd745c.chunk.js": "/Dashboard/static/js/2.98bd745c.chunk.js",
     "static/js/2.98bd745c.chunk.js.map": "/Dashboard/static/js/2.98bd745c.chunk.js.map",
     "index.html": "/Dashboard/index.html",
-    "precache-manifest.8ca71461900827d7fc98da3e0611d312.js": "/Dashboard/precache-manifest.8ca71461900827d7fc98da3e0611d312.js",
+    "precache-manifest.f371dfe0d2722826700e05757f084a1a.js": "/Dashboard/precache-manifest.f371dfe0d2722826700e05757f084a1a.js",
     "service-worker.js": "/Dashboard/service-worker.js",
     "static/css/main.815c2080.chunk.css.map": "/Dashboard/static/css/main.815c2080.chunk.css.map",
     "static/js/2.98bd745c.chunk.js.LICENSE.txt": "/Dashboard/static/js/2.98bd745c.chunk.js.LICENSE.txt",
-    "static/media/Abin Thaha Azees - Resume.pdf": "/Dashboard/static/media/Abin Thaha Azees - Resume.fd845649.pdf",
+    "static/media/Abin Thaha Azees - Resume.pdf": "/Dashboard/static/media/Abin Thaha Azees - Resume.6bfe8b68.pdf",
     "static/media/index.css": "/Dashboard/static/media/user-pic.39b0a54d.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.e2c9115c.js",
     "static/js/2.98bd745c.chunk.js",
     "static/css/main.815c2080.chunk.css",
-    "static/js/main.986eb944.chunk.js"
+    "static/js/main.d273a30d.chunk.js"
   ]
 }
