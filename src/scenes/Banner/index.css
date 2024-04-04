@@ -5,10 +5,12 @@
   background: #fff;
   border-bottom: 1px solid;
   border-bottom-color: #E52E2D;
-  overflow: hidden; }
-  .page-header .signature {
-    font-size: 1.6rem;
-    cursor: pointer; }
+  overflow: hidden;
+}
+.page-header .signature {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
 
 .banner {
   padding: 20px 8%;
@@ -21,221 +23,314 @@
   background-attachment: fixed;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
+.banner .user-image {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid #E52E2D;
+  background-color: #adb685;
+  background-image: url("../../assets/images/user-pic.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 640px) {
   .banner .user-image {
-    display: inline-block;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border: 1px solid #E52E2D;
-    background-color: #adb685;
-    background-image: url("../../assets/images/user-pic.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; }
-    @media (max-width: 640px) {
-      .banner .user-image {
-        width: 150px;
-        height: 150px; } }
+    width: 150px;
+    height: 150px;
+  }
+}
+.banner h1 {
+  color: #fff;
+  font-size: 3.125rem;
+  margin: 10px 0;
+  text-align: center;
+  text-shadow: 1px 2px 2px #000;
+}
+@media (max-width: 640px) {
   .banner h1 {
-    color: #fff;
-    font-size: 3.125rem;
-    margin: 10px 0;
-    text-align: center;
-    text-shadow: 1px 2px 2px #000; }
-    @media (max-width: 640px) {
-      .banner h1 {
-        font-size: 2.1rem; } }
-    .banner h1 .title {
-      font-family: 'Dancing Script'; }
-      @media (max-width: 640px) {
-        .banner h1 .title {
-          display: block; } }
-  .banner h2 {
-    color: #a3a3a3;
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 10px 0;
-    text-shadow: 1px 2px 2px #000;
-    height: 120px; }
-    @media (max-width: 640px) {
-      .banner h2 {
-        font-size: 1.8rem; } }
-  .banner .download-resume-btn {
-    color: #fff;
-    border: 1px solid #E52E2D;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 20px;
-    min-width: 140px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none; }
-    .banner .download-resume-btn:hover {
-      background-color: #E52E2D; }
-  .banner .quote {
-    color: #fff;
-    font-family: 'Dancing Script';
-    margin-top: 50px;
-    font-size: 1.7rem;
-    text-align: center; }
-    @media (max-width: 640px) {
-      .banner .quote {
-        font-size: 1.6rem; } }
-  .banner .small-desc {
+    font-size: 2.1rem;
+  }
+}
+.banner h1 .title {
+  font-family: "Dancing Script";
+}
+@media (max-width: 640px) {
+  .banner h1 .title {
     display: block;
-    margin-top: 20px;
-    color: #fff;
-    font-size: 1.1rem;
-    text-align: center; }
-    @media (max-width: 640px) {
-      .banner .small-desc {
-        font-size: 0.9rem; } }
+  }
+}
+.banner h2 {
+  color: #a3a3a3;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 10px 0;
+  text-shadow: 1px 2px 2px #000;
+  height: 120px;
+}
+@media (max-width: 640px) {
+  .banner h2 {
+    font-size: 1.8rem;
+  }
+}
+.banner .download-resume-btn {
+  color: #fff;
+  border: 1px solid #E52E2D;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+  min-width: 140px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.banner .download-resume-btn:hover {
+  background-color: #E52E2D;
+}
+.banner .quote {
+  color: #fff;
+  font-family: "Dancing Script";
+  margin-top: 50px;
+  font-size: 1.7rem;
+  text-align: center;
+}
+@media (max-width: 640px) {
+  .banner .quote {
+    font-size: 1.6rem;
+  }
+}
+.banner .small-desc {
+  display: block;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+}
+@media (max-width: 640px) {
+  .banner .small-desc {
+    font-size: 0.9rem;
+  }
+}
 
 .position {
-  letter-spacing: 0.5em; }
-  .position:after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    line-height: 48px;
-    animation: typing 10s linear infinite;
-    animation-fill-mode: forwards; }
+  letter-spacing: 0.5em;
+}
+.position:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  line-height: 48px;
+  animation: typing 10s linear infinite;
+  animation-fill-mode: forwards;
+}
 
 /* The typing effect */
 @keyframes typing {
   0% {
-    content: "F"; }
+    content: "F";
+  }
   2% {
-    content: "FR"; }
+    content: "FR";
+  }
   4% {
-    content: "FRO"; }
+    content: "FRO";
+  }
   7% {
-    content: "FRON "; }
+    content: "FRON ";
+  }
   9% {
-    content: "FRONT"; }
+    content: "FRONT";
+  }
   11% {
-    content: "FRONT E"; }
+    content: "FRONT E";
+  }
   13% {
-    content: "FRONT EN"; }
+    content: "FRONT EN";
+  }
   15% {
-    content: "FRONT END"; }
+    content: "FRONT END";
+  }
   17% {
-    content: "FRONT END D"; }
+    content: "FRONT END D";
+  }
   19% {
-    content: "FRONT END DE"; }
+    content: "FRONT END DE";
+  }
   22% {
-    content: "FRONT END DEV"; }
+    content: "FRONT END DEV";
+  }
   25% {
-    content: "FRONT END DEVE"; }
+    content: "FRONT END DEVE";
+  }
   28% {
-    content: "FRONT END DEVEL"; }
+    content: "FRONT END DEVEL";
+  }
   30% {
-    content: "FRONT END DEVELO"; }
+    content: "FRONT END DEVELO";
+  }
   32% {
-    content: "FRONT END DEVELOP"; }
+    content: "FRONT END DEVELOP";
+  }
   34% {
-    content: "FRONT END DEVELOPE"; }
+    content: "FRONT END DEVELOPE";
+  }
   36% {
-    content: "FRONT END DEVELOPER"; }
+    content: "FRONT END DEVELOPER";
+  }
   37% {
-    content: "FRONT END DEVELOPER."; }
+    content: "FRONT END DEVELOPER.";
+  }
   42.5% {
-    content: "FRONT END DEVELOPE "; }
+    content: "FRONT END DEVELOPE ";
+  }
   43% {
-    content: "FRONT END DEVELOP"; }
+    content: "FRONT END DEVELOP";
+  }
   43.5% {
-    content: "FRONT END DEVELO"; }
+    content: "FRONT END DEVELO";
+  }
   44% {
-    content: "FRONT END DEVEL"; }
+    content: "FRONT END DEVEL";
+  }
   44.5% {
-    content: "FRONT END DEVE"; }
+    content: "FRONT END DEVE";
+  }
   45% {
-    content: "FRONT END DEV"; }
+    content: "FRONT END DEV";
+  }
   45.5% {
-    content: "FRONT END DE"; }
+    content: "FRONT END DE";
+  }
   46% {
-    content: "FRONT END D"; }
+    content: "FRONT END D";
+  }
   46.5% {
-    content: "FRONT END"; }
+    content: "FRONT END";
+  }
   47% {
-    content: "FRONT EN"; }
+    content: "FRONT EN";
+  }
   47.5% {
-    content: "FRONT E"; }
+    content: "FRONT E";
+  }
   48% {
-    content: "FRONT"; }
+    content: "FRONT";
+  }
   48.5% {
-    content: "FRON"; }
+    content: "FRON";
+  }
   49% {
-    content: "FRO"; }
+    content: "FRO";
+  }
   49.5% {
-    content: "FR"; }
+    content: "FR";
+  }
   50% {
-    content: "F"; }
+    content: "F";
+  }
   53% {
-    content: "FU"; }
+    content: "FU";
+  }
   56% {
-    content: "FUL"; }
+    content: "FUL";
+  }
   59% {
-    content: "FULL"; }
+    content: "FULL";
+  }
   62% {
-    content: "FULL S"; }
+    content: "FULL S";
+  }
   65% {
-    content: "FULL ST"; }
+    content: "FULL ST";
+  }
   68% {
-    content: "FULL STA"; }
+    content: "FULL STA";
+  }
   71% {
-    content: "FULL STA"; }
+    content: "FULL STA";
+  }
   73% {
-    content: "FULL STAC"; }
+    content: "FULL STAC";
+  }
   75% {
-    content: "FULL STACK"; }
+    content: "FULL STACK";
+  }
   77% {
-    content: "FULL STACK DEV"; }
+    content: "FULL STACK DEV";
+  }
   79% {
-    content: "FULL STACK DEVE"; }
+    content: "FULL STACK DEVE";
+  }
   81% {
-    content: "FULL STACK DEVEL"; }
+    content: "FULL STACK DEVEL";
+  }
   82% {
-    content: "FULL STACK DEVELO"; }
+    content: "FULL STACK DEVELO";
+  }
   83% {
-    content: "FULL STACK DEVELOP"; }
+    content: "FULL STACK DEVELOP";
+  }
   84% {
-    content: "FULL STACK DEVELOPE"; }
+    content: "FULL STACK DEVELOPE";
+  }
   86% {
-    content: "FULL STACK DEVELOPER"; }
+    content: "FULL STACK DEVELOPER";
+  }
   87% {
-    content: "FULL STACK DEVELOPER."; }
+    content: "FULL STACK DEVELOPER.";
+  }
   91% {
-    content: "FULL STACK DEVELOPE "; }
+    content: "FULL STACK DEVELOPE ";
+  }
   92% {
-    content: "FULL STACK DEVELOP"; }
+    content: "FULL STACK DEVELOP";
+  }
   93% {
-    content: "FULL STACK DEVELO"; }
+    content: "FULL STACK DEVELO";
+  }
   94% {
-    content: "FULL STACK DEVEL"; }
+    content: "FULL STACK DEVEL";
+  }
   94.5% {
-    content: "FULL STACK DEVE"; }
+    content: "FULL STACK DEVE";
+  }
   95% {
-    content: "FULL STACK DEV"; }
+    content: "FULL STACK DEV";
+  }
   95.5% {
-    content: "FULL STACK DE"; }
+    content: "FULL STACK DE";
+  }
   96% {
-    content: "FULL STACK D"; }
+    content: "FULL STACK D";
+  }
   96.5% {
-    content: "FULL STACK"; }
+    content: "FULL STACK";
+  }
   97% {
-    content: "FULL STAC"; }
+    content: "FULL STAC";
+  }
   97.5% {
-    content: "FULL STA"; }
+    content: "FULL STA";
+  }
   98% {
-    content: "FULL ST"; }
+    content: "FULL ST";
+  }
   98.5% {
-    content: "FULL S"; }
+    content: "FULL S";
+  }
   99% {
-    content: "FUL"; }
+    content: "FUL";
+  }
   99.5% {
-    content: "FUL"; }
+    content: "FUL";
+  }
   100% {
-    content: "F"; } }
+    content: "F";
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

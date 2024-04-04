@@ -65,7 +65,7 @@ class App extends Component {
                 </div>
             </div>
             <footer className='copyright-footer'>
-                Copyright © 2019 Hosted by <span className="">abinthaha</span>
+                Copyright © 2024 Hosted by <span className="">abinthaha</span>
             </footer>
         </section>
     );

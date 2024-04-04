@@ -1,40 +1,57 @@
 .about-me {
   padding: 50px 8% 20px;
-  display: flex; }
+  display: flex;
+}
+.about-me .each-section {
+  flex: 1;
+  min-width: 50%;
+  max-width: 50%;
+}
+.about-me .each-section .focus h2 {
+  font-size: 1.5rem;
+}
+.about-me .each-section .content {
+  line-height: 1.8;
+  font-size: 1rem;
+  text-align: justify;
+}
+.about-me .each-section .content .highlight {
+  font-size: 1.4rem;
+}
+.about-me .each-section:first-child {
+  padding-right: 25px;
+}
+.about-me .each-section:last-child {
+  padding-left: 25px;
+}
+.about-me .highlight {
+  font-weight: bold;
+  transition: all 0.8s ease-out;
+}
+@media (max-width: 640px) {
+  .about-me {
+    flex-direction: column;
+  }
   .about-me .each-section {
-    flex: 1;
-    min-width: 50%;
-    max-width: 50%; }
-    .about-me .each-section .focus h2 {
-      font-size: 1.5rem; }
-    .about-me .each-section .content {
-      line-height: 1.8;
-      font-size: 1rem;
-      text-align: justify; }
-      .about-me .each-section .content .highlight {
-        font-size: 1.4rem; }
-    .about-me .each-section:first-child {
-      padding-right: 25px; }
-    .about-me .each-section:last-child {
-      padding-left: 25px; }
-  .about-me .highlight {
-    font-weight: bold;
-    transition: all 0.8s ease-out; }
-  @media (max-width: 640px) {
-    .about-me {
-      flex-direction: column; }
-      .about-me .each-section {
-        min-width: 100%;
-        max-width: 100%; }
-        .about-me .each-section:first-child {
-          padding-right: 0;
-          border-bottom: 1px solid #a3a3a3;
-          margin-bottom: 10px;
-          padding-bottom: 30px; }
-        .about-me .each-section:last-child {
-          padding-left: 0; }
-        .about-me .each-section .content {
-          padding-right: 0; } }
-  .about-me.viewed .highlight {
-    color: #E52E2D;
-    font-size: 1.4rem; }
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .about-me .each-section:first-child {
+    padding-right: 0;
+    border-bottom: 1px solid #a3a3a3;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+  }
+  .about-me .each-section:last-child {
+    padding-left: 0;
+  }
+  .about-me .each-section .content {
+    padding-right: 0;
+  }
+}
+.about-me.viewed .highlight {
+  color: #E52E2D;
+  font-size: 1.4rem;
+}
+
+/*# sourceMappingURL=index.css.map */

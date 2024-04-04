@@ -1,35 +1,51 @@
 .experience {
-  padding: 50px 8%; }
+  padding: 50px 8%;
+}
+.experience .experience-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.experience .experience-wrapper .experience-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5%;
+}
+.experience .experience-wrapper .experience-item .label {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 1.4rem;
+}
+.experience .experience-wrapper .experience-item .experience-value {
+  font-size: 4rem;
+  color: #000;
+  font-weight: 900;
+}
+@media (min-width: 641px) and (max-width: 1023px) {
+  .experience .experience-wrapper .experience-item {
+    margin: 0 5%;
+  }
+  .experience .experience-wrapper .experience-item .label {
+    font-size: 1.1rem;
+  }
+  .experience .experience-wrapper .experience-item .experience-value {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 640px) {
+  .experience {
+    padding: 20px 8%;
+  }
   .experience .experience-wrapper {
-    display: flex;
-    justify-content: center; }
-    .experience .experience-wrapper .experience-item {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 50px; }
-      .experience .experience-wrapper .experience-item .label {
-        text-transform: uppercase;
-        font-weight: 100;
-        font-size: 1.4rem; }
-      .experience .experience-wrapper .experience-item .experience-value {
-        font-size: 4rem;
-        color: #000;
-        font-weight: 900; }
-  @media (min-width: 641px) and (max-width: 1023px) {
-    .experience .experience .experience-wrapper .experience-item {
-      margin: 0 20px; }
-      .experience .experience .experience-wrapper .experience-item .label {
-        font-size: 1.1rem; }
-      .experience .experience .experience-wrapper .experience-item .experience-value {
-        font-size: 2rem; } }
-  @media (max-width: 640px) {
-    .experience {
-      padding: 20px 8%; }
-      .experience .experience-wrapper {
-        flex-direction: column;
-        align-items: center; }
-        .experience .experience-wrapper .experience-item {
-          margin: 20px 0; }
-          .experience .experience-wrapper .experience-item .label {
-            font-size: 1rem; } }
+    flex-direction: column;
+    align-items: center;
+  }
+  .experience .experience-wrapper .experience-item {
+    margin: 20px 0;
+  }
+  .experience .experience-wrapper .experience-item .label {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

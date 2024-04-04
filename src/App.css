@@ -1,30 +1,38 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
-  line-height: 1.5; }
-  @media (max-width: 640px) {
-    body {
-      font-size: 14px; } }
+  line-height: 1.5;
+}
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
 
 .signature {
   font-weight: bold;
   color: #E52E2D;
-  font-family: 'Dancing Script', cursive;
-  font-size: 2rem; }
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+}
 
 .even {
-  background-color: #f8f9fa; }
+  background-color: #f8f9fa;
+}
 
 .odd {
-  background-color: #fff; }
+  background-color: #fff;
+}
 
 .section-heading {
   text-align: center;
-  font-size: 3rem; }
-  .section-heading .signature {
-    font-size: 3rem; }
+  font-size: 3rem;
+}
+.section-heading .signature {
+  font-size: 3rem;
+}
 
 div,
 span,
@@ -38,4 +46,7 @@ h4,
 h5,
 h6,
 section {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=App.css.map */

@@ -2,6 +2,14 @@
 
 # dependencies
 /node_modules
+/Open Notebook.onetoc2
+/*/Open Notebook.onetoc2
+/*/*/Open Notebook.onetoc2
+/*/*/*/Open Notebook.onetoc2
+/*/*/*/*/Open Notebook.onetoc2
+/package-lock.json
+/*/*.css.map
+/*/*/*/index.css.map
 
 # testing
 /coverage

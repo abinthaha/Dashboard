@@ -1,10 +1,13 @@
 .portfolio-wrapper {
-  padding: 10px 8% 50px; }
-  .portfolio-wrapper h2 {
-    font-size: 3rem;
-    text-align: center; }
-    .portfolio-wrapper h2 .signature {
-      font-size: 3rem; }
+  padding: 10px 8% 50px;
+}
+.portfolio-wrapper h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+.portfolio-wrapper h2 .signature {
+  font-size: 3rem;
+}
 
 .flip-wrapper {
   list-style: none;
@@ -12,95 +15,119 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+}
+.flip-wrapper .flip-card {
+  background-color: transparent;
+  display: inline-block;
+  height: 250px;
+  transition: all 0.3s ease;
+  width: 30%;
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 10px;
+}
+.flip-wrapper .flip-card .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.flip-wrapper .flip-card .flip-card-inner .flip-card-front,
+.flip-wrapper .flip-card .flip-card-inner .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  backface-visibility: hidden;
+  display: flex;
+}
+.flip-wrapper .flip-card .flip-card-inner .flip-card-front {
+  background-color: #bbb;
+  color: black;
+  display: inline-block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+}
+.flip-wrapper .flip-card .flip-card-inner .flip-card-back {
+  background-color: #901514;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.flip-wrapper .flip-card .flip-card-inner .flip-card-back .project-name {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  padding: 15px;
+  font-size: 22px;
+}
+.flip-wrapper .flip-card .flip-card-inner .flip-card-back .links {
+  padding: 10px 10px 20px;
+}
+.flip-wrapper .flip-card .flip-card-inner .flip-card-back .card-label {
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 5px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.flip-wrapper .flip-card .flip-card-inner .flip-card-back .card-label:hover {
+  background-color: #E52E2D;
+  -webkit-box-shadow: inset 0px 0px 104px 18px rgb(150, 33, 33);
+  -moz-box-shadow: inset 0px 0px 104px 18px rgb(150, 33, 33);
+  box-shadow: inset 0px 0px 104px 18px rgb(150, 33, 33);
+}
+.flip-wrapper .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-wrapper .flip-card:hover .flip-card-inner .card-label {
+  z-index: 0;
+}
+.flip-wrapper .flip-card:nth-child(1n) .flip-card-front {
+  background-image: url("../../assets/images/portfolio/KTM.PNG");
+}
+.flip-wrapper .flip-card:nth-child(2n) .flip-card-front {
+  background-image: url("../../assets/images/portfolio/Upcomer-Replication.PNG");
+}
+.flip-wrapper .flip-card:nth-child(3n) .flip-card-front {
+  background-image: url("../../assets/images/portfolio/Why-So-Serious.PNG");
+}
+.flip-wrapper .flip-card:nth-child(4n) .flip-card-front {
+  background-image: url("../../assets/images/portfolio/Movie-Listing.PNG");
+}
+.flip-wrapper .flip-card:nth-child(5n) .flip-card-front {
+  background-image: url("../../assets/images/portfolio/Scroll-Parallax.PNG");
+}
+.flip-wrapper .flip-card:nth-child(6n) .flip-card-front {
+  background-image: url("../../assets/images/portfolio/Bubble.PNG");
+}
+@media (min-width: 641px) and (max-width: 1023px) {
   .flip-wrapper .flip-card {
-    background-color: transparent;
-    display: inline-block;
-    height: 250px;
-    transition: all 0.3s ease;
-    width: 30%;
-    perspective: 1000px;
-    cursor: pointer;
-    margin: 10px; }
-    .flip-wrapper .flip-card .flip-card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
-      .flip-wrapper .flip-card .flip-card-inner .flip-card-front,
-      .flip-wrapper .flip-card .flip-card-inner .flip-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        backface-visibility: hidden;
-        display: flex; }
-      .flip-wrapper .flip-card .flip-card-inner .flip-card-front {
-        background-color: #bbb;
-        color: black;
-        display: inline-block;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background-size: cover;
-        background-position: center center;
-        color: #fff; }
-      .flip-wrapper .flip-card .flip-card-inner .flip-card-back {
-        background-color: #901514;
-        color: white;
-        transform: rotateY(180deg);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; }
-        .flip-wrapper .flip-card .flip-card-inner .flip-card-back .project-name {
-          flex: 1;
-          display: flex;
-          width: 100%;
-          padding: 15px;
-          font-size: 22px; }
-        .flip-wrapper .flip-card .flip-card-inner .flip-card-back .links {
-          padding: 10px 10px 20px; }
-        .flip-wrapper .flip-card .flip-card-inner .flip-card-back .card-label {
-          color: #fff;
-          text-decoration: none;
-          font-size: 30px;
-          margin: 5px;
-          border-radius: 50%;
-          width: 60px;
-          height: 60px;
-          display: inline-flex;
-          justify-content: center;
-          align-items: center;
-          transition: all 0.3s ease; }
-          .flip-wrapper .flip-card .flip-card-inner .flip-card-back .card-label:hover {
-            background-color: #E52E2D;
-            -webkit-box-shadow: inset 0px 0px 104px 18px #962121;
-            -moz-box-shadow: inset 0px 0px 104px 18px #962121;
-            box-shadow: inset 0px 0px 104px 18px #962121; }
-    .flip-wrapper .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg); }
-      .flip-wrapper .flip-card:hover .flip-card-inner .card-label {
-        z-index: 0; }
-    .flip-wrapper .flip-card:nth-child(1n) .flip-card-front {
-      background-image: url("../../assets/images/portfolio/KTM.PNG"); }
-    .flip-wrapper .flip-card:nth-child(2n) .flip-card-front {
-      background-image: url("../../assets/images/portfolio/Upcomer-Replication.PNG"); }
-    .flip-wrapper .flip-card:nth-child(3n) .flip-card-front {
-      background-image: url("../../assets/images/portfolio/Why-So-Serious.PNG"); }
-    .flip-wrapper .flip-card:nth-child(4n) .flip-card-front {
-      background-image: url("../../assets/images/portfolio/Movie-Listing.PNG"); }
-    .flip-wrapper .flip-card:nth-child(5n) .flip-card-front {
-      background-image: url("../../assets/images/portfolio/Scroll-Parallax.PNG"); }
-    .flip-wrapper .flip-card:nth-child(6n) .flip-card-front {
-      background-image: url("../../assets/images/portfolio/Bubble.PNG"); }
-    @media (min-width: 641px) and (max-width: 1023px) {
-      .flip-wrapper .flip-card {
-        width: 45%; } }
-    @media (max-width: 640px) {
-      .flip-wrapper .flip-card {
-        width: 95%; } }
+    width: 45%;
+  }
+}
+@media (max-width: 640px) {
+  .flip-wrapper .flip-card {
+    width: 95%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -3,88 +3,131 @@
   padding: 0;
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-between; }
-  @media (min-width: 641px) and (max-width: 1023px) {
-    .achievement-wrapper {
-      justify-content: center; } }
-  @media (max-width: 640px) {
-    .achievement-wrapper {
-      flex-direction: column;
-      align-items: center; } }
+  justify-content: space-between;
+}
+@media (min-width: 641px) and (max-width: 1023px) {
+  .achievement-wrapper {
+    justify-content: center;
+  }
+}
+@media (max-width: 640px) {
+  .achievement-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.achievement-wrapper .cert-item {
+  border-radius: 50%;
+  flex: 1;
+  max-width: 300px;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+@media (min-width: 1024px) and (max-width: 1640px) {
   .achievement-wrapper .cert-item {
-    border-radius: 50%;
-    flex: 1;
-    max-width: 300px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s ease; }
-    @media (min-width: 1024px) and (max-width: 1640px) {
-      .achievement-wrapper .cert-item {
-        max-width: 250px;
-        height: 250px; } }
-    @media (min-width: 1024px) and (max-width: 1260px) {
-      .achievement-wrapper .cert-item {
-        max-width: 200px;
-        height: 200px; } }
-    @media (min-width: 641px) and (max-width: 1023px) {
-      .achievement-wrapper .cert-item {
-        max-width: 200px;
-        min-width: 200px;
-        min-height: 200px;
-        margin: 15px; } }
-    @media (max-width: 640px) {
-      .achievement-wrapper .cert-item {
-        max-width: 200px;
-        min-width: 200px;
-        min-height: 200px;
-        margin: 15px; } }
-    .achievement-wrapper .cert-item .img-wrapper {
-      background-size: 70%;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 100%;
-      display: inline-block;
-      border-radius: 50%;
-      background-position: center;
-      position: absolute; }
-    .achievement-wrapper .cert-item.ga {
-      border: 6px solid #e37400; }
-      .achievement-wrapper .cert-item.ga .img-wrapper {
-        background-image: url("../../assets/images/Achievements/Google analytics.png"); }
-    .achievement-wrapper .cert-item.ms365 {
-      border: 6px solid #008fe3; }
-      .achievement-wrapper .cert-item.ms365 .img-wrapper {
-        background-image: url("../../assets/images/Achievements/Microsoft365.png"); }
-    .achievement-wrapper .cert-item.azure {
-      border: 6px solid #e30073; }
-      .achievement-wrapper .cert-item.azure .img-wrapper {
-        background-image: url("../../assets/images/Achievements/Azure Fundamentals.png"); }
-    .achievement-wrapper .cert-item.html {
-      border: 6px solid #8bc34a; }
-      .achievement-wrapper .cert-item.html .img-wrapper {
-        background-image: url("../../assets/images/Achievements/HTML5.png"); }
-    .achievement-wrapper .cert-item .item-name {
-      position: absolute;
-      top: 100%;
-      bottom: 0;
-      left: 0;
-      display: flex;
-      justify-content: center;
-      font-size: 1.2rem;
-      align-items: center;
-      padding: 20px;
-      text-align: center;
-      width: 100%;
-      color: #fff;
-      transition: all 0.3s ease; }
-    .achievement-wrapper .cert-item.ga .item-name {
-      background-color: #e37400; }
-    .achievement-wrapper .cert-item.ms365 .item-name {
-      background-color: #008fe3; }
-    .achievement-wrapper .cert-item.azure .item-name {
-      background-color: #e30073; }
-    .achievement-wrapper .cert-item.html .item-name {
-      background-color: #8bc34a; }
-    .achievement-wrapper .cert-item:hover .item-name {
-      top: 0; }
+    max-width: 250px;
+    height: 250px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1260px) {
+  .achievement-wrapper .cert-item {
+    max-width: 200px;
+    height: 200px;
+  }
+}
+@media (min-width: 641px) and (max-width: 1023px) {
+  .achievement-wrapper .cert-item {
+    max-width: 200px;
+    min-width: 200px;
+    min-height: 200px;
+    height: 200px;
+    margin: 15px;
+  }
+}
+@media (max-width: 640px) {
+  .achievement-wrapper .cert-item {
+    max-width: 200px;
+    min-width: 200px;
+    min-height: 200px;
+    height: 200px;
+    margin: 15px;
+  }
+}
+.achievement-wrapper .cert-item .img-wrapper {
+  background-size: 70%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border-radius: 50%;
+  background-position: center;
+  position: absolute;
+}
+.achievement-wrapper .cert-item.ga {
+  border: 6px solid #00e3e3;
+}
+.achievement-wrapper .cert-item.ga .img-wrapper {
+  background-image: url("../../assets/images/Achievements/Google analytics.png");
+}
+.achievement-wrapper .cert-item.ms365 {
+  border: 6px solid #008fe3;
+}
+.achievement-wrapper .cert-item.ms365 .img-wrapper {
+  background-image: url("../../assets/images/Achievements/Microsoft365.png");
+}
+.achievement-wrapper .cert-item.azure {
+  border: 6px solid #e30073;
+}
+.achievement-wrapper .cert-item.azure .img-wrapper {
+  background-image: url("../../assets/images/Achievements/Azure Fundamentals.png");
+}
+.achievement-wrapper .cert-item.html {
+  border: 6px solid #8bc34a;
+}
+.achievement-wrapper .cert-item.html .img-wrapper {
+  background-image: url("../../assets/images/Achievements/HTML5.png");
+}
+.achievement-wrapper .cert-item.scrum {
+  border: 6px solid #ec0eda;
+}
+.achievement-wrapper .cert-item.scrum .img-wrapper {
+  background-image: url("../../assets/images/Achievements/sfpc.png");
+}
+.achievement-wrapper .cert-item .item-name {
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.achievement-wrapper .cert-item.ga .item-name {
+  background-color: #00e3e3;
+}
+.achievement-wrapper .cert-item.ms365 .item-name {
+  background-color: #008fe3;
+}
+.achievement-wrapper .cert-item.azure .item-name {
+  background-color: #e30073;
+}
+.achievement-wrapper .cert-item.html .item-name {
+  background-color: #8bc34a;
+}
+.achievement-wrapper .cert-item.scrum .item-name {
+  background-color: #ec0eda;
+}
+.achievement-wrapper .cert-item:hover .item-name {
+  top: 0;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -16,6 +16,9 @@ class Skills extends Component {
 							name: 'React + Redux',
 							rating: 8.5
 						}, {
+							name: 'React-toolkit',
+							rating: 9
+						}, {
 							name: 'NodeJS + ExpressJS',
 							rating: 7
 						}, {
@@ -118,6 +121,17 @@ class Skills extends Component {
 						}
 					]
 				}, {
+					name: 'Software development teams',
+					items: [
+						{
+							name: 'Azure devops',
+							rating: 8
+						}, {
+							name: 'Jira',
+							rating: 7
+						}
+					]
+				}, {
 					name: 'Deployment',
 					items: [
 						{
@@ -132,6 +146,9 @@ class Skills extends Component {
 						}, {
 							name: 'Heroku',
 							rating: 6
+						}, {
+							name: 'Netlify',
+							rating: 7
 						}
 					]
 				}, {

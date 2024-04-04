@@ -1,9 +1,10 @@
 @import '../../common/variables';
 
 $html_color: #8bc34a;
+$scrum_color: #ec0eda;
 $azure_color: #e30073;
 $ms365_color: #008fe3;
-$ga_color: #e37400;
+$ga_color: #00e3e3;
 
 .achievement-wrapper {
     list-style: none;
@@ -26,6 +27,7 @@ $ga_color: #e37400;
         flex: 1;
         max-width: 300px;
         position: relative;
+        height: 300px;
         overflow: hidden;
         cursor: pointer;
         transition: $transition_common;
@@ -44,6 +46,7 @@ $ga_color: #e37400;
             max-width: 200px;
             min-width: 200px;
             min-height: 200px;
+            height: 200px;
             margin: 15px;
         }
 
@@ -52,6 +55,7 @@ $ga_color: #e37400;
             max-width: 200px;
             min-width: 200px;
             min-height: 200px;
+            height: 200px;
             margin: 15px;
         }
 
@@ -98,6 +102,14 @@ $ga_color: #e37400;
             }
         }
 
+        &.scrum {
+            border: 6px solid $scrum_color;
+
+            .img-wrapper {
+                background-image: url('../../assets/images/Achievements/sfpc.png');
+            }
+        }
+
         .item-name {
             position: absolute;
             top: 100%;
@@ -128,6 +140,10 @@ $ga_color: #e37400;
 
         &.html .item-name {
             background-color: $html_color;
+        }
+        
+        &.scrum .item-name {
+            background-color: $scrum_color;
         }
 
         &:hover {

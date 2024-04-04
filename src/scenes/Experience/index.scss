@@ -11,7 +11,7 @@
             display: inline-flex;
             flex-direction: column;
             align-items: center;
-            margin: 0 50px;
+            margin: 0 5%;
 
             .label {
                 text-transform: uppercase;
@@ -28,8 +28,8 @@
     }
 
     @media #{$tablet} {
-        .experience .experience-wrapper .experience-item {
-            margin: 0 20px;
+        .experience-wrapper .experience-item {
+            margin: 0 5%;
 
             .label {
                 font-size: $large;

@@ -3,10 +3,31 @@ import "./index.css";
 
 const workExperience = [
   {
+    companyName: "Ernst & Young",
+    companyUrl: "https://www.ey.com/en_in",
+    jobRole: "Senior Technical Lead",
+    duration: "Feb, 2022 - Present",
+    technologies: [
+      "HTML5", "CSS3", "SCSS", "JavaScript", "Angular 7", "React", "Redux", "Redux-toolkit", "Axios", "TypeScript", "React-router"
+    ],
+    responsibilities: [
+      "Providing expertise and direction in front-end technologies and best practices.",
+      "Leading and mentoring front-end developers, setting standards, and fostering collaboration.",
+      "Collaborating with stakeholders to define project scope, timelines, and deliverables.",
+      "Ensuring code quality, performance, and adherence to coding standards.",
+      "Assessing new tools, frameworks, and technologies for implementation.",
+      "Resolving technical challenges, optimizing processes, and improving workflows.",
+      "Working with design, back-end, and QA teams for seamless project execution.",
+      "Engaging with clients for requirements gathering, updates, and feedback",
+      "Keeping up-to-date with industry trends, best practices, and emerging technologies.",
+      "Conduct interviews as part of organizational activities, assessing candidates for their suitability and alignment with company goals"
+    ],
+  },
+  {
     companyName: "Kloud9",
     companyUrl: "http://kloud9.nyc/",
     jobRole: "Senior Software Engineer",
-    duration: "May, 2021 - Present",
+    duration: "May, 2021 - Jan, 2022",
     technologies: [
       "HTML5", "CSS3", "SCSS", "JavaScript", "Angular 4", "Angular 7", "React", "Redux", "TypeScript"
     ],

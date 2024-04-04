@@ -19,17 +19,17 @@ class Services extends Component {
         icon: 'fas fa-mobile-alt',
         description: 'Each and every site including hobby projects are made in a way that fully responsive in Mobile, Tablet, Desktop and other large devices.'
       }, {
-        name: 'Well Documented',
+        name: 'Well documented and Clean code',
         icon: 'far fa-file-alt',
         description: "The code is maintained in a way where anyone else can easily understand what's written and the work flow."
       }, {
-        name: 'Clean Code',
+        name: 'UX Design and Optimized code',
         icon: 'far fa-copy',
-        description: 'Well defined and clean code which is self explanatory in a very reusable manner.'
+        description: 'A code developed with proper UX design and optimization techniques ensures user-friendly interfaces, fast loading times, and high search engine visibility for an enhanced user experience.'
       }, {
-        name: 'Video Training',
+        name: 'Team handling and Mentoring',
         icon: 'far fa-file-video',
-        description: 'The training will go over some great insights to help users understand how to get the most out of their site.'
+        description: '"I offer mentoring, guiding development, and team handling support, ensuring effective leadership and growth within groups.'
       }]
     }
   }
