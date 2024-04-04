@@ -8,15 +8,15 @@
     "react": "^16.14.0",
     "react-app-polyfill": "^1.0.6",
     "react-dom": "^16.14.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^3.0.1"
   },
   "scripts": {
     "build-css": "sass -I ./src -I ./node_modules src/:src/",
     "watch-css": "npm run build-css && sass -I ./src -I ./node_modules src/:src/ --watch",
     "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
-    "build": "npm-run-all build-css build-js",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build",

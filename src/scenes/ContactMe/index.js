@@ -8,7 +8,7 @@ const workExperience = [
     jobRole: "Senior Technical Lead",
     duration: "Feb, 2022 - Present",
     technologies: [
-      "HTML5", "CSS3", "SCSS", "JavaScript", "Angular 7", "React", "Redux", "Redux-toolkit", "Axios", "TypeScript", "React-router"
+      "HTML5", "CSS3", "SCSS", "JavaScript", "Angular 14", "React", "Redux", "Redux-toolkit", "Axios", "TypeScript", "React-router"
     ],
     responsibilities: [
       "Providing expertise and direction in front-end technologies and best practices.",
