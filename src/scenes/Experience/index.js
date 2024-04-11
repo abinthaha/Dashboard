@@ -42,7 +42,6 @@ class Experience extends Component {
     
         const diffTime = Math.abs(a - b);
         const diffDays = Math.ceil(diffTime / MS_PER_DAY); 
-        console.log("Days: ", diffDays);
     
         // Discard the time and time-zone information.
         const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
@@ -82,19 +81,14 @@ class Experience extends Component {
     }
     getDaysInLastFullMonth(day) {
         var d = new Date(day);
-        console.log(d.getDay() );
     
         var lastDayOfMonth = new Date(d.getFullYear(), d.getMonth() + 1, 0);
-        console.log('last day of month:', lastDayOfMonth.getDate() ); //
         return lastDayOfMonth.getDate();
     }
 
     hoursDiff = (date_future, date_now) => {
     
         var delta = Math.abs(date_future - date_now) / 1000;
-        
-        // Calculate years
-        console.log(delta);
     
         // calculate (and subtract) whole days
         var days = Math.floor(delta / 86400);

@@ -80,7 +80,7 @@ const workExperience = [
 class ContactMe extends Component {
   render() {
     return (
-      <section className="contact-me odd" id={this.props.elId}>
+      <section className="my-experience odd" id={this.props.elId}>
         <div className="wrapper">
           <div className="each-section experience">
             <h2>

@@ -1,6 +1,6 @@
 @import "../../common/_variables";
 
-.contact-me {
+.my-experience {
   padding: 10px $page_margin 50px;
 }
 
@@ -22,9 +22,12 @@
     li {
       line-height: 1.8;
       text-align: justify;
+
       .technologies {
         margin-top: 20px;
         color: #043c78;
+        animation: change-link-color 3s infinite linear;
+
         span {
           &:not(:last-child) {
             &::after {
@@ -53,5 +56,20 @@
   ol {
     margin-top: 15px;
     list-style: circle;
+  }
+}
+
+@keyframes change-link-color {
+
+  0%,
+  59%,
+  98%,
+  100% {
+      color: #06294e;
+  }
+
+  61%,
+  97% {
+      color: #1073dd;
   }
 }

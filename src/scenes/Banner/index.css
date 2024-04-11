@@ -16,14 +16,32 @@
   padding: 20px 8%;
   display: flex;
   min-height: 750px;
-  background-image: url("../../assets/images/banner-bg.jpg");
+  background-image: url("../../assets/images/photo1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   background-attachment: fixed;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.banner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.banner .contentWrapper {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .banner .user-image {
   display: inline-block;
@@ -45,10 +63,15 @@
 }
 .banner h1 {
   color: #fff;
-  font-size: 3.125rem;
+  font-size: 4rem;
   margin: 10px 0;
   text-align: center;
   text-shadow: 1px 2px 2px #000;
+}
+@media (min-width: 641px) and (max-width: 1023px) {
+  .banner h1 {
+    font-size: 3.125rem;
+  }
 }
 @media (max-width: 640px) {
   .banner h1 {
@@ -57,6 +80,12 @@
 }
 .banner h1 .title {
   font-family: "Dancing Script";
+  font-size: 3.125rem;
+}
+@media (min-width: 641px) and (max-width: 1023px) {
+  .banner h1 .title {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 640px) {
   .banner h1 .title {
