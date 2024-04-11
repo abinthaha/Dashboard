@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f42713cc0ec23838cc1ff64bc7a26e70",
+    "revision": "d8e57590920d27d058e68b84990c9262",
     "url": "/Dashboard/index.html"
   },
   {
-    "revision": "5637ddaddfe57aa6d4b9",
-    "url": "/Dashboard/static/css/main.b960988d.chunk.css"
+    "revision": "9686ba07831fc1f974e7",
+    "url": "/Dashboard/static/css/main.d254a2dd.chunk.css"
   },
   {
-    "revision": "21a97402318899c97047",
-    "url": "/Dashboard/static/js/2.bafaf9e8.chunk.js"
+    "revision": "78adf7f002bba3b1d707",
+    "url": "/Dashboard/static/js/2.ebd27749.chunk.js"
   },
   {
-    "revision": "5637ddaddfe57aa6d4b9",
-    "url": "/Dashboard/static/js/main.464aed6f.chunk.js"
+    "revision": "9686ba07831fc1f974e7",
+    "url": "/Dashboard/static/js/main.1685efe8.chunk.js"
   },
   {
     "revision": "d8bc9ec02fd6e05b6a8d",
@@ -64,8 +64,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Dashboard/static/media/Why-So-Serious.d1f5d0df.PNG"
   },
   {
-    "revision": "20a2aadd16493b8038334cf178c501be",
-    "url": "/Dashboard/static/media/banner-bg.20a2aadd.jpg"
+    "revision": "7777762382c094b980e7b9216d7fcd79",
+    "url": "/Dashboard/static/media/photo1.77777623.jpg"
   },
   {
     "revision": "9edd5810b971c52399438c42c1e5dd58",
