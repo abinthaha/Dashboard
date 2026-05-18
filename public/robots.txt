@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# GitHub Pages — project site
+Sitemap: https://abinthaha.github.io/Dashboard/sitemap.xml

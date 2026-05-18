@@ -228,7 +228,7 @@ class Experience extends Component {
                   </strong>{" "}
                   since <time dateTime="2015-07-13">13 July 2015</time>
                 </p>
-                <ul className="experience-map__legend-stats" role="list">
+                {/* <ul className="experience-map__legend-stats" role="list">
                   {stats.map((s) => (
                     <li
                       key={s.label}
@@ -243,7 +243,7 @@ class Experience extends Component {
                       </span>
                     </li>
                   ))}
-                </ul>
+                </ul> */}
               </div>
             </div>
 

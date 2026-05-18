@@ -148,39 +148,200 @@
 		}
 	}
 
-	.download-resume-btn {
-		display: inline-block;
-		color: darken($signature_red, 6%);
-		border: 1px solid rgba($signature_red, 0.55);
-		padding: 0.65rem 1.5rem;
+	.resume-hippo-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.65rem;
 		margin-top: 0.25rem;
+		padding: 0.35rem 1.25rem 0.35rem 0.45rem;
 		border-radius: 999px;
-		min-width: 10rem;
-		text-align: center;
+		min-height: 3rem;
+		border: 1px solid rgba($signature_red, 0.55);
+		text-decoration: none;
 		cursor: pointer;
 		font-size: $small;
 		font-weight: 600;
 		letter-spacing: 0.04em;
-		text-decoration: none;
+		color: darken($signature_red, 6%);
 		background: rgba($signature_red, 0.08);
+		box-shadow: 0 1px 3px rgba($signature_red, 0.08);
 		transition:
-			background 0.25s ease,
-			border-color 0.25s ease,
-			color 0.25s ease,
-			transform 0.2s ease,
-			box-shadow 0.25s ease;
+			background 0.3s ease,
+			border-color 0.3s ease,
+			color 0.3s ease,
+			box-shadow 0.3s ease,
+			transform 0.25s ease;
 
 		&:hover {
 			color: $white;
 			background: $signature_red;
 			border-color: $signature_red;
 			transform: translateY(-2px);
-			box-shadow: 0 8px 24px rgba($signature_red, 0.35);
+			box-shadow: 0 10px 28px rgba($signature_red, 0.38);
 		}
 
 		&:focus-visible {
 			outline: 2px solid $signature_red;
 			outline-offset: 3px;
+		}
+	}
+
+	.resume-hippo-btn__svg-wrap {
+		flex-shrink: 0;
+		line-height: 0;
+		width: 7.25rem;
+		max-width: 42vw;
+
+		@media #{$mobile} {
+			width: 6.25rem;
+		}
+	}
+
+	.resume-hippo-btn__svg {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	.resume-hippo-btn__label {
+		padding-right: 0.15rem;
+		white-space: nowrap;
+	}
+
+	$t-hippo: 0.34s;
+	$ease-hippo: cubic-bezier(0.33, 1, 0.68, 1);
+
+	.resume-hippo__ear-left-outer,
+	.resume-hippo__ear-right-outer {
+		fill: #919191;
+	}
+
+	.resume-hippo__ear-left-inner,
+	.resume-hippo__ear-right-inner {
+		fill: #6d6d6d;
+	}
+
+	.resume-hippo__eye-right-outer,
+	.resume-hippo__eye-left-outer,
+	.resume-hippo__nostril-right-outer,
+	.resume-hippo__nostril-left-outer,
+	.resume-hippo__body {
+		fill: #aaaaaa;
+	}
+
+	.resume-hippo__eye-right-inner,
+	.resume-hippo__eye-left-inner {
+		fill: #ffffff;
+	}
+
+	.resume-hippo__nostril-right-inner,
+	.resume-hippo__nostril-left-inner {
+		fill: #8c8c8c;
+	}
+
+	.resume-hippo__freckle {
+		fill: #7c7c7c;
+	}
+
+	.resume-hippo__tongue {
+		fill: $signature_red;
+	}
+
+	.resume-hippo__tooth-left,
+	.resume-hippo__tooth-right {
+		fill: #ffffe1;
+	}
+
+	.resume-hippo__eye-left-pupil,
+	.resume-hippo__eye-right-pupil {
+		fill: #2a2a2a;
+		transform-box: fill-box;
+		transform-origin: center center;
+		will-change: transform;
+	}
+
+	.resume-hippo__mouth-pieces,
+	.resume-hippo__teeth,
+	.resume-hippo__body,
+	.resume-hippo__freckles,
+	.resume-hippo__ears,
+	.resume-hippo__eye-right,
+	.resume-hippo__eye-left,
+	.resume-hippo__eyes,
+	.resume-hippo__nostrils {
+		transition: transform $t-hippo $ease-hippo;
+	}
+
+	.resume-hippo__body {
+		transform-origin: center bottom;
+	}
+
+	.resume-hippo__teeth {
+		transform-origin: center bottom;
+	}
+
+	.resume-hippo__ear-right {
+		transform-origin: 190px 19px;
+		animation: resume-hippo-ear-wiggle 4.5s ease-in-out infinite;
+	}
+
+	.resume-hippo-btn:hover .resume-hippo__mouth-pieces,
+	.resume-hippo-btn:focus-visible .resume-hippo__mouth-pieces {
+		transform: translate(0, -70px);
+	}
+
+	.resume-hippo-btn:hover .resume-hippo__teeth,
+	.resume-hippo-btn:focus-visible .resume-hippo__teeth {
+		transform: translate(0, -70px) scaleY(1.18);
+	}
+
+	.resume-hippo-btn:hover .resume-hippo__body,
+	.resume-hippo-btn:focus-visible .resume-hippo__body {
+		transform: scaleY(1.06);
+	}
+
+	.resume-hippo-btn:hover .resume-hippo__freckles,
+	.resume-hippo-btn:focus-visible .resume-hippo__freckles {
+		transform: translate(0, -10px);
+	}
+
+	.resume-hippo-btn:hover .resume-hippo__ears,
+	.resume-hippo-btn:focus-visible .resume-hippo__ears {
+		transform: translate(0, 6px);
+	}
+
+	.resume-hippo-btn:hover .resume-hippo__eye-right,
+	.resume-hippo-btn:focus-visible .resume-hippo__eye-right {
+		transform: translate(-2px, 0);
+	}
+
+	.resume-hippo-btn:hover .resume-hippo__eye-left,
+	.resume-hippo-btn:focus-visible .resume-hippo__eye-left {
+		transform: translate(2px, 0);
+	}
+
+	.resume-hippo-btn:hover .resume-hippo__eyes,
+	.resume-hippo-btn:focus-visible .resume-hippo__eyes {
+		transform: translate(0, 2px);
+	}
+
+	.resume-hippo-btn:hover .resume-hippo__nostrils,
+	.resume-hippo-btn:focus-visible .resume-hippo__nostrils {
+		transform: translate(0, -6px);
+	}
+
+	@keyframes resume-hippo-ear-wiggle {
+		0%,
+		88%,
+		100% {
+			transform: rotate(0deg);
+		}
+		90% {
+			transform: rotate(14deg);
+		}
+		92% {
+			transform: rotate(0deg);
 		}
 	}
 }
@@ -303,7 +464,19 @@
 		right: 0;
 		height: 3px;
 		background: linear-gradient(90deg, $signature_red, lighten($signature_red, 8%), $signature_red);
+		z-index: 2;
+		pointer-events: none;
 	}
+}
+
+.banner-hero__foreground {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.65rem;
+	width: 100%;
 }
 
 .banner-hero__eyebrow {
@@ -396,7 +569,7 @@ html[data-theme="dark"] {
 			opacity: 0.85;
 		}
 
-		.download-resume-btn {
+		.resume-hippo-btn {
 			color: lighten($signature_red, 10%);
 			background: rgba($signature_red, 0.12);
 			border-color: rgba($signature_red, 0.45);
@@ -411,6 +584,15 @@ html[data-theme="dark"] {
 			&:focus-visible {
 				outline-color: lighten($signature_red, 12%);
 			}
+		}
+
+		.resume-hippo__body {
+			fill: #8f9399;
+		}
+
+		.resume-hippo__eye-right-outer,
+		.resume-hippo__eye-left-outer {
+			fill: #9ea3ab;
 		}
 	}
 
@@ -444,7 +626,32 @@ html[data-theme="dark"] {
 		display: none !important;
 	}
 
-	.banner .download-resume-btn:hover {
+	.banner .resume-hippo-btn:hover {
+		transform: none;
+	}
+
+	.banner .resume-hippo__ear-right {
+		animation: none;
+	}
+
+	.banner .resume-hippo-btn:hover .resume-hippo__mouth-pieces,
+	.banner .resume-hippo-btn:focus-visible .resume-hippo__mouth-pieces,
+	.banner .resume-hippo-btn:hover .resume-hippo__teeth,
+	.banner .resume-hippo-btn:focus-visible .resume-hippo__teeth,
+	.banner .resume-hippo-btn:hover .resume-hippo__body,
+	.banner .resume-hippo-btn:focus-visible .resume-hippo__body,
+	.banner .resume-hippo-btn:hover .resume-hippo__freckles,
+	.banner .resume-hippo-btn:focus-visible .resume-hippo__freckles,
+	.banner .resume-hippo-btn:hover .resume-hippo__ears,
+	.banner .resume-hippo-btn:focus-visible .resume-hippo__ears,
+	.banner .resume-hippo-btn:hover .resume-hippo__eye-right,
+	.banner .resume-hippo-btn:focus-visible .resume-hippo__eye-right,
+	.banner .resume-hippo-btn:hover .resume-hippo__eye-left,
+	.banner .resume-hippo-btn:focus-visible .resume-hippo__eye-left,
+	.banner .resume-hippo-btn:hover .resume-hippo__eyes,
+	.banner .resume-hippo-btn:focus-visible .resume-hippo__eyes,
+	.banner .resume-hippo-btn:hover .resume-hippo__nostrils,
+	.banner .resume-hippo-btn:focus-visible .resume-hippo__nostrils {
 		transform: none;
 	}
 }

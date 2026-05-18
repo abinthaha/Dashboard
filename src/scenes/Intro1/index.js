@@ -45,7 +45,7 @@ class Introduction extends Component {
                 </h2>
                 <div className="about-panel__content">
                   <span className="highlight">Associate Project Manager</span> with a
-                  strong front-end engineering background—I connect delivery, people, and
+                  strong front-end engineering and web development background—I connect delivery, people, and
                   technology. I help teams turn ambiguous goals into{" "}
                   <span className="highlight">actionable plans</span>, keep{" "}
                   <span className="highlight">stakeholders informed</span>, and steer work

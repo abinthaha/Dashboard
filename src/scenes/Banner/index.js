@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./index.css";
 import resumePdf from "../../assets/Abin Thaha Azees - Resume.pdf";
 import ThemeToggle from "../../common/ThemeToggle/ThemeToggle";
+import BannerResumeHippo from "./BannerResumeHippo";
 
 class Banner extends Component {
   constructor(props) {
@@ -72,7 +73,7 @@ class Banner extends Component {
               <a href="#skills">Skills</a>
               <a href="#contactMe">Contact</a>
               <a href="#portfolio">Projects</a>
-              <a href="#footer">Contact</a>
+              <a href="#footer">Social</a>
             </nav>
             <ThemeToggle />
           </div>
@@ -88,26 +89,26 @@ class Banner extends Component {
             <div className="banner__cursor-sheen" />
           </div>
           <section className="contentWrapper banner-hero banner-hero--panel">
-            <p className="banner-hero__eyebrow">
-              Associate Project Manager · delivery &amp; stakeholder alignment
-            </p>
-            <h1 className="banner-hero__title">
-              <span className="banner-hero__name">Abin Thaha Azees</span>
-            </h1>
-            <p className="banner-hero__role">
-              Programs, roadmaps, and cross-functional execution—with a strong technical
-              background when teams need depth.
-            </p>
-            <a
-              href={resumePdf}
-              className="download-resume-btn banner-hero__cta"
-              download="Abin Thaha Azees - Resume.pdf"
-            >
-              Download resume
-            </a>
-            <p className="banner-hero__note">
-              Based in Kochi, Kerala · open to remote-friendly roles worldwide.
-            </p>
+            <div className="banner-hero__foreground">
+              <p className="banner-hero__eyebrow">
+                Associate Project Manager · delivery &amp; stakeholder alignment
+              </p>
+              <h1 className="banner-hero__title">
+                <span className="banner-hero__name">Abin Thaha Azees</span>
+              </h1>
+              <p className="banner-hero__role">
+                Programs, roadmaps, and cross-functional execution—with a strong technical
+                background when teams need depth.
+              </p>
+              <BannerResumeHippo
+                href={resumePdf}
+                download="Abin Thaha Azees - Resume.pdf"
+                className="banner-hero__cta"
+              />
+              <p className="banner-hero__note">
+                Based in Kochi, Kerala · open to remote-friendly roles worldwide.
+              </p>
+            </div>
           </section>
         </div>
       </section>
