@@ -1,75 +1,191 @@
 @import "../../common/_variables";
 
+// Legacy (older markup)
 .my-experience {
-  padding: 10px $page_margin 50px;
+	padding: 10px $page_margin 50px;
 }
 
-.experience {
-  h2 {
-    text-align: center;
-    font-size: 3rem;
+.contact-section {
+	position: relative;
+	padding: clamp(2.25rem, 5vw, 3.5rem) $page_margin clamp(2.5rem, 6vw, 4rem);
+	overflow: hidden;
 
-    .signature {
-      font-size: 3rem;
-    }
-  }
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background:
+			radial-gradient(ellipse 85% 50% at 15% 0%, rgba($signature_red, 0.1), transparent 50%),
+			radial-gradient(ellipse 70% 45% at 100% 100%, rgba(0, 0, 0, 0.04), transparent 50%);
+		pointer-events: none;
+		z-index: 0;
+	}
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+	&__inner {
+		position: relative;
+		z-index: 1;
+		max-width: 52rem;
+		margin: 0 auto;
+	}
 
-    li {
-      line-height: 1.8;
-      text-align: justify;
+	.section-heading {
+		position: relative;
+		z-index: 1;
+	}
 
-      .technologies {
-        margin-top: 20px;
-        color: #043c78;
-        animation: change-link-color 3s infinite linear;
+	&__intro {
+		text-align: center;
+		max-width: 38rem;
+		margin: -0.35rem auto 2rem;
+		font-size: $large;
+		color: #4a4f59;
+		line-height: 1.55;
+	}
 
-        span {
-          &:not(:last-child) {
-            &::after {
-              content: ", ";
-            }
-          }
-        }
-      }
+	&__link {
+		color: $signature_red;
+		font-weight: 700;
+		text-decoration: underline;
+		text-decoration-thickness: 2px;
+		text-underline-offset: 3px;
 
-      .company-name {
-        font-size: $large;
-        display: flex;
-        flex-direction: row;
+		&:hover {
+			text-decoration-thickness: 3px;
+		}
 
-        .time-period {
-          margin-left: 10px;
-        }
+		&:focus-visible {
+			outline: 2px solid $signature_red;
+			outline-offset: 3px;
+			border-radius: 2px;
+		}
+	}
 
-        @media #{$mobile} {
-          flex-direction: column;
-        }
-      }
-    }
-  }
+	&__actions {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+		gap: 1rem;
+		max-width: 44rem;
+		margin-inline: auto;
+	}
 
-  ol {
-    margin-top: 15px;
-    list-style: circle;
-  }
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.35rem;
+		height: 100%;
+		padding: 1.15rem 1.2rem;
+		border-radius: 14px;
+		text-decoration: none;
+		color: inherit;
+		box-sizing: border-box;
+		background: linear-gradient(155deg, $white 0%, #f8f9fb 100%);
+		border: 1px solid rgba(0, 0, 0, 0.08);
+		box-shadow:
+			0 1px 2px rgba(0, 0, 0, 0.05),
+			0 10px 32px rgba(0, 0, 0, 0.07);
+		transition:
+			transform 0.25s ease,
+			box-shadow 0.25s ease,
+			border-color 0.25s ease;
+
+		&:hover {
+			transform: translateY(-3px);
+			border-color: rgba($signature_red, 0.22);
+			box-shadow:
+				0 4px 12px rgba(0, 0, 0, 0.06),
+				0 18px 44px rgba($signature_red, 0.12);
+		}
+
+		&:focus-visible {
+			outline: 3px solid $signature_red;
+			outline-offset: 3px;
+		}
+
+		&--primary {
+			border-color: rgba($signature_red, 0.25);
+			box-shadow:
+				0 1px 2px rgba($signature_red, 0.06),
+				0 12px 36px rgba($signature_red, 0.14);
+		}
+	}
+
+	&__card-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 12px;
+		background: rgba($signature_red, 0.1);
+		color: $signature_red;
+		font-size: 1.15rem;
+	}
+
+	&__card-label {
+		font-size: $xsmall;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #5c6370;
+	}
+
+	&__card-value {
+		font-size: $usual;
+		font-weight: 700;
+		color: #14161d;
+		line-height: 1.35;
+		word-break: break-word;
+	}
 }
 
-@keyframes change-link-color {
+html[data-theme="dark"] {
+	.contact-section__intro {
+		color: #a4acba;
+	}
 
-  0%,
-  59%,
-  98%,
-  100% {
-      color: #06294e;
-  }
+	.contact-section__card {
+		background: linear-gradient(155deg, #252d38 0%, #1e252f 100%);
+		border-color: rgba(255, 255, 255, 0.1);
+		box-shadow:
+			0 1px 2px rgba(0, 0, 0, 0.25),
+			0 12px 40px rgba(0, 0, 0, 0.35);
 
-  61%,
-  97% {
-      color: #1073dd;
-  }
+		&:hover {
+			border-color: rgba($signature_red, 0.45);
+			box-shadow:
+				0 4px 16px rgba(0, 0, 0, 0.35),
+				0 20px 48px rgba($signature_red, 0.18);
+		}
+
+		&--primary {
+			border-color: rgba($signature_red, 0.4);
+		}
+	}
+
+	.contact-section__card-label {
+		color: #9aa3af;
+	}
+
+	.contact-section__card-value {
+		color: #f0f2f5;
+	}
+
+	.contact-section__card-icon {
+		background: rgba($signature_red, 0.18);
+		color: lighten($signature_red, 8%);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.contact-section__card {
+		transition: none;
+
+		&:hover {
+			transform: none;
+		}
+	}
 }

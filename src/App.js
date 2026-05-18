@@ -16,7 +16,7 @@ class App extends Component {
   constructor(props) {
     super();
     this.state = {
-      elements: ['banner', 'intro', 'skills', 'achievements', 'portfolio', 'services', 'contactMe', 'footer'],
+      elements: ['banner', 'intro', 'experience', 'skills', 'achievements', 'services', 'portfolio', 'contactMe', 'footer'],
       viewedComponents: {}
     }
     this.setCompOnView = this.setCompOnView.bind(this);
@@ -34,16 +34,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <a href="#main" className="skip-link">Skip to main content</a>
         <ScrollWrapper elements={this.state.elements} setCompOnView={this.setCompOnView} />
-        <Banner elId='banner' isViewed={this.state.viewedComponents.banner} />
-        <Introduction elId='intro' isViewed={this.state.viewedComponents.intro} />
-        <Experience elId='experience' isViewed={this.state.viewedComponents.intro} />
-        <Skills elId='skills' isViewed={this.state.viewedComponents.skills} />
-        <Achievements elId='achievements' isViewed={this.state.viewedComponents.achievements} />
-        <Services elId='services' isViewed={this.state.viewedComponents.services} />
-        <Portfolio elId='portfolio' isViewed={this.state.viewedComponents.portfolio} />
-        <ContactMe elId='contactMe' isViewed={this.state.viewedComponents.contactMe} />
-        <Footer elId='footer' isViewed={this.state.viewedComponents.footer} />
+        <main id="main">
+          <Banner elId='banner' isViewed={this.state.viewedComponents.banner} />
+          <Introduction elId='intro' isViewed={this.state.viewedComponents.intro} />
+          <Experience elId='experience' isViewed={this.state.viewedComponents.experience} />
+          <Skills elId='skills' isViewed={this.state.viewedComponents.skills} />
+          <Achievements elId='achievements' isViewed={this.state.viewedComponents.achievements} />
+          <Services elId='services' isViewed={this.state.viewedComponents.services} />
+          <Portfolio elId='portfolio' isViewed={this.state.viewedComponents.portfolio} />
+          <ContactMe elId='contactMe' isViewed={this.state.viewedComponents.contactMe} />
+          <Footer elId='footer' isViewed={this.state.viewedComponents.footer} />
+        </main>
       </div>
     );
   }

@@ -1,158 +1,200 @@
-@import '../../common/variables';
+@import "../../common/_variables";
 
 $html_color: #8bc34a;
 $scrum_color: #ec0eda;
 $azure_color: #e30073;
 $ms365_color: #008fe3;
 $ga_color: #00e3e3;
+$copilot_color: #238636;
 
-.contact-me {
-    padding: 10px 8% 50px;
+.achievements-section {
+	padding: clamp(2rem, 5vw, 2.75rem) $page_margin clamp(2.5rem, 6vw, 3.5rem);
 }
-.achievement-wrapper {
-    list-style: none;
-    padding: 0;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
 
-    @media #{$tablet} {
-        justify-content: center;
-    }
+.achievements-section__inner {
+	max-width: 72rem;
+	margin: 0 auto;
+}
 
-    @media #{$mobile} {
-        flex-direction: column;
-        align-items: center;
-    }
+.achievements-intro {
+	text-align: center;
+	max-width: 36rem;
+	margin: -0.25rem auto 1.75rem;
+	font-size: $large;
+	color: #4a4f59;
+	line-height: 1.55;
+}
 
-    .cert-item {
-        border-radius: 50%;
-        flex: 1;
-        max-width: 300px;
-        position: relative;
-        height: 300px;
-        overflow: hidden;
-        cursor: pointer;
-        transition: $transition_common;
+.achievement-grid {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+	gap: 1.25rem 1rem;
+	align-items: stretch;
 
-        @media #{$mid_screen} {
-            max-width: 250px;
-            height: 250px;
-        }
+	@media #{$mobile} {
+		grid-template-columns: repeat(auto-fill, minmax(10.75rem, 1fr));
+		gap: 1rem;
+	}
 
-        @media (min-width: 1024px) and (max-width: 1260px) {
-            max-width: 200px;
-            height: 200px;
-        }
+	@media (max-width: 380px) {
+		grid-template-columns: 1fr;
+		max-width: 19rem;
+		margin-inline: auto;
+	}
+}
 
-        @media #{$tablet} {
-            max-width: 200px;
-            min-width: 200px;
-            min-height: 200px;
-            height: 200px;
-            margin: 15px;
-        }
+.achievement-card-wrap {
+	margin: 0;
+}
 
+.achievement-card {
+	height: 100%;
+	min-height: 14.5rem;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 1.15rem 0.85rem 1.15rem;
+	border-radius: 16px;
+	background: linear-gradient(180deg, #fff 0%, #fafbfc 100%);
+	border: 1px solid rgba(0, 0, 0, 0.07);
+	border-top: 3px solid $signature_red;
+	box-shadow:
+		0 1px 2px rgba(0, 0, 0, 0.04),
+		0 8px 24px rgba(0, 0, 0, 0.06);
+	outline: none;
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease,
+		border-color 0.25s ease;
 
-        @media #{$mobile} {
-            max-width: 200px;
-            min-width: 200px;
-            min-height: 200px;
-            height: 200px;
-            margin: 15px;
-        }
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow:
+			0 4px 12px rgba(0, 0, 0, 0.08),
+			0 16px 36px rgba(0, 0, 0, 0.1);
+	}
+}
 
-        .img-wrapper {
-            background-size: 70%;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100%;
-            display: inline-block;
-            border-radius: 50%;
-            background-position: center;
-            position: absolute;
-        }
+.achievement-card-wrap--copilot .achievement-card {
+	border-top-color: $copilot_color;
+}
 
-        &.ga {
-            border: 6px solid $ga_color;
+.achievement-card-wrap--scrum .achievement-card {
+	border-top-color: $scrum_color;
+}
 
-            .img-wrapper {
-                background-image: url('../../assets/images/Achievements/Google\ analytics.png');
-            }
-        }
+.achievement-card-wrap--ga .achievement-card {
+	border-top-color: $ga_color;
+}
 
-        &.ms365 {
-            border: 6px solid $ms365_color;
+.achievement-card-wrap--ms365 .achievement-card {
+	border-top-color: $ms365_color;
+}
 
-            .img-wrapper {
-                background-image: url('../../assets/images/Achievements/Microsoft365.png');
-            }
-        }
+.achievement-card-wrap--azure .achievement-card {
+	border-top-color: $azure_color;
+}
 
-        &.azure {
-            border: 6px solid $azure_color;
+.achievement-card-wrap--html .achievement-card {
+	border-top-color: $html_color;
+}
 
-            .img-wrapper {
-                background-image: url('../../assets/images/Achievements/Azure\ Fundamentals.png');
-            }
-        }
+.achievement-card__badge {
+	flex-shrink: 0;
+	width: 6.75rem;
+	height: 6.75rem;
+	margin-bottom: 0.65rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.03);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
 
-        &.html {
-            border: 6px solid $html_color;
+.achievement-card__img {
+	width: 86%;
+	height: 86%;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70%;
+}
 
-            .img-wrapper {
-                background-image: url('../../assets/images/Achievements/HTML5.png');
-            }
-        }
+.achievement-card__img--ga {
+	background-image: url("../../assets/images/Achievements/Google\ analytics.png");
+}
 
-        &.scrum {
-            border: 6px solid $scrum_color;
+.achievement-card__img--ms365 {
+	background-image: url("../../assets/images/Achievements/Microsoft365.png");
+}
 
-            .img-wrapper {
-                background-image: url('../../assets/images/Achievements/sfpc.png');
-            }
-        }
+.achievement-card__img--azure {
+	background-image: url("../../assets/images/Achievements/Azure\ Fundamentals.png");
+}
 
-        .item-name {
-            position: absolute;
-            top: 100%;
-            bottom: 0;
-            left: 0;
-            display: flex;
-            justify-content: center;
-            font-size: 1.2rem;
-            align-items: center;
-            padding: 20px;
-            text-align: center;
-            width: 100%;
-            color: #fff;
-            transition: $transition_common;
-        }
+.achievement-card__img--html {
+	background-image: url("../../assets/images/Achievements/HTML5.png");
+}
 
-        &.ga .item-name {
-            background-color: $ga_color;
-        }
+.achievement-card__img--scrum {
+	background-image: url("../../assets/images/Achievements/sfpc.png");
+}
 
-        &.ms365 .item-name {
-            background-color: $ms365_color;
-        }
+.achievement-card__img--copilot {
+	background-image: url("../../assets/images/Achievements/Github-Copilot-GH300.png");
+	background-size: 62%;
+}
 
-        &.azure .item-name {
-            background-color: $azure_color;
-        }
+.achievement-card__title {
+	margin: 0;
+	font-size: $small;
+	font-weight: 600;
+	line-height: 1.45;
+	color: #1a1d21;
+	letter-spacing: -0.01em;
+	flex: 1;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
 
-        &.html .item-name {
-            background-color: $html_color;
-        }
-        
-        &.scrum .item-name {
-            background-color: $scrum_color;
-        }
+html[data-theme="dark"] {
+	.achievements-intro {
+		color: #a4acba;
+	}
 
-        &:hover {
-            .item-name {
-                top: 0;
-            }
-        }
-    }
+	.achievement-card {
+		background: linear-gradient(180deg, #1e232c 0%, #181c24 100%);
+		border-color: rgba(255, 255, 255, 0.08);
+		box-shadow:
+			0 1px 2px rgba(0, 0, 0, 0.25),
+			0 8px 24px rgba(0, 0, 0, 0.35);
+	}
+
+	.achievement-card__title {
+		color: #e8eaed;
+	}
+
+	.achievement-card__badge {
+		background: rgba(255, 255, 255, 0.05);
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.achievement-card {
+		transition: none;
+
+		&:hover {
+			transform: none;
+		}
+	}
+
 }

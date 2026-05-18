@@ -2,7 +2,26 @@
 <html lang="en">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script>
+    (function () {
+      try {
+        var k = "dashboard-theme";
+        var stored = localStorage.getItem(k);
+        var theme =
+          stored === "dark" || stored === "light"
+            ? stored
+            : "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+        var m = document.querySelector('meta[name="theme-color"]');
+        if (m) {
+          m.setAttribute("content", theme === "dark" ? "#12151c" : "#ffffff");
+        }
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics (UA legacy — consider migrating to GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124426461-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,16 +36,26 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Roboto" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
     integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#12151c">
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-  <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/premium/png-256-thumb/avengers-1-581105.png">
-  <meta name="description" content="This is a personal portfolio of myself - Abin Thaha Azeez.">
-  <meta name="robots" content="noindex" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="%PUBLIC_URL%/favicon.svg">
+  <meta name="description" content="Personal portfolio of Abin Thaha Azees — front-end engineering, leadership, and selected projects.">
+  <meta name="robots" content="index,follow" />
   <meta name="google-site-verification" content="t5IMMl7i75eHWgBWOeVsN4WgC8gOqtPYi0-V0zJfN8A" />
-  <title>Abin Thaha Azeez</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Abin Thaha Azees">
+  <meta property="og:description" content="Front-end engineer and technical lead — portfolio, experience, and contact.">
+  <meta property="og:url" content="https://abinthaha.github.io/Dashboard/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Abin Thaha Azees">
+  <meta name="twitter:description" content="Front-end engineer and technical lead — portfolio, experience, and contact.">
+  <title>Abin Thaha Azees</title>
 </head>
 
 <body>
