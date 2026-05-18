@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "72b688300163c2fd45da7f99c638ed07",
+    "revision": "29cd83b083f750ff790ff80fe94a0dd6",
     "url": "/Dashboard/index.html"
   },
   {
-    "revision": "3af36737a12f28d2619b",
-    "url": "/Dashboard/static/css/main.cd9bea9a.chunk.css"
+    "revision": "a8377d0438c951954015",
+    "url": "/Dashboard/static/css/main.11b42bc5.chunk.css"
   },
   {
     "revision": "a78d4a70967fe14df54f",
     "url": "/Dashboard/static/js/2.04130790.chunk.js"
   },
   {
-    "revision": "3af36737a12f28d2619b",
-    "url": "/Dashboard/static/js/main.f60b213d.chunk.js"
+    "revision": "a8377d0438c951954015",
+    "url": "/Dashboard/static/js/main.5eb6ba2d.chunk.js"
   },
   {
     "revision": "d8bc9ec02fd6e05b6a8d",
     "url": "/Dashboard/static/js/runtime~main.8d25dc92.js"
   },
   {
-    "revision": "6508d8ec687c485d7d2814ab3cff7648",
-    "url": "/Dashboard/static/media/Abin Thaha Azees - Resume.6508d8ec.pdf"
+    "revision": "9aa850a6859081b0be2e265f14510f48",
+    "url": "/Dashboard/static/media/Abin Thaha Azees - Resume.9aa850a6.pdf"
   },
   {
     "revision": "76c0becf68517d645aea06e321438af4",
