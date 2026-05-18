@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d8e57590920d27d058e68b84990c9262",
+    "revision": "72b688300163c2fd45da7f99c638ed07",
     "url": "/Dashboard/index.html"
   },
   {
-    "revision": "9686ba07831fc1f974e7",
-    "url": "/Dashboard/static/css/main.d254a2dd.chunk.css"
+    "revision": "3af36737a12f28d2619b",
+    "url": "/Dashboard/static/css/main.cd9bea9a.chunk.css"
   },
   {
-    "revision": "78adf7f002bba3b1d707",
-    "url": "/Dashboard/static/js/2.ebd27749.chunk.js"
+    "revision": "a78d4a70967fe14df54f",
+    "url": "/Dashboard/static/js/2.04130790.chunk.js"
   },
   {
-    "revision": "9686ba07831fc1f974e7",
-    "url": "/Dashboard/static/js/main.1685efe8.chunk.js"
+    "revision": "3af36737a12f28d2619b",
+    "url": "/Dashboard/static/js/main.f60b213d.chunk.js"
   },
   {
     "revision": "d8bc9ec02fd6e05b6a8d",
     "url": "/Dashboard/static/js/runtime~main.8d25dc92.js"
   },
   {
-    "revision": "24c9c99157ba903197ea0eba0961e55e",
-    "url": "/Dashboard/static/media/Abin Thaha Azees - Resume.24c9c991.pdf"
+    "revision": "6508d8ec687c485d7d2814ab3cff7648",
+    "url": "/Dashboard/static/media/Abin Thaha Azees - Resume.6508d8ec.pdf"
   },
   {
     "revision": "76c0becf68517d645aea06e321438af4",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0702ae597631cd0854bc84f6108bc662",
     "url": "/Dashboard/static/media/Bubble.0702ae59.PNG"
+  },
+  {
+    "revision": "10f4422c40c2a7f7b94b36fafa2d0196",
+    "url": "/Dashboard/static/media/Github-Copilot-GH300.10f4422c.png"
   },
   {
     "revision": "3d88b0603551ada3bcd8b160d4c997b5",
@@ -62,10 +66,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d1f5d0dfbdc4ed8d4ea690b1ab76b3ec",
     "url": "/Dashboard/static/media/Why-So-Serious.d1f5d0df.PNG"
-  },
-  {
-    "revision": "7777762382c094b980e7b9216d7fcd79",
-    "url": "/Dashboard/static/media/photo1.77777623.jpg"
   },
   {
     "revision": "9edd5810b971c52399438c42c1e5dd58",
