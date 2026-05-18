@@ -61,8 +61,21 @@ function MoonIcon() {
   );
 }
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ className }) {
   const [theme, setTheme] = useState(() => readDomTheme() || readStoredTheme());
+
+  /** Keep multiple toggles in sync (e.g. desktop + mobile drawer). */
+  useEffect(() => {
+    const el = document.documentElement;
+    const syncFromDom = () => {
+      const t = readDomTheme();
+      if (!t) return;
+      setTheme((prev) => (prev === t ? prev : t));
+    };
+    const mo = new MutationObserver(syncFromDom);
+    mo.observe(el, { attributes: true, attributeFilter: ["data-theme"] });
+    return () => mo.disconnect();
+  }, []);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -82,7 +95,7 @@ export default function ThemeToggle() {
   return (
     <button
       type="button"
-      className="theme-toggle"
+      className={["theme-toggle", className].filter(Boolean).join(" ")}
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
       aria-pressed={isDark}

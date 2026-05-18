@@ -192,10 +192,6 @@ class Experience extends Component {
           <h1 className="section-heading" id="experience-heading">
             My <span className="signature">Experience</span>
           </h1>
-          <p className="experience__intro">
-            Your career as a map — latest role first, tracing back to where it began.
-            Select any role card for the full responsibility list and tech stack.
-          </p>
 
           <div className="experience-map" aria-describedby="experience-map-desc">
             <p id="experience-map-desc" className="visually-hidden">

@@ -590,6 +590,7 @@
 		border-radius: 12px 12px 0 0;
 		background: linear-gradient(90deg, $signature_red, #ff7043);
 		opacity: 0.9;
+		z-index: 1;
 	}
 }
 
@@ -609,10 +610,15 @@
 	text-align: inherit;
 }
 
+.experience-map__stop--start .experience-map__card {
+	padding-top: 2.05rem;
+}
+
 .experience-map__stop--start .experience-map__card::after {
 	content: "START";
 	position: absolute;
-	top: -0.5rem;
+	top: 7px;
+	z-index: 2;
 	font-size: 0.55rem;
 	font-weight: 800;
 	letter-spacing: 0.14em;

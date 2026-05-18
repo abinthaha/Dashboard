@@ -32,9 +32,6 @@ class Introduction extends Component {
           aria-labelledby="intro-heading focus-heading"
         >
           <div className="about-me__inner">
-            <p className="about-me__kicker">
-              Associate Project Manager · technically fluent
-            </p>
             <div className="about-me__grid">
               <article
                 className="about-panel"

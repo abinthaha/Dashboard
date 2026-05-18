@@ -11,11 +11,7 @@
 .page-header {
 	margin: 0;
 	padding: 0.75rem $page_margin;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	gap: 0.75rem 1.25rem;
+	display: block;
 	background: $white;
 	border-bottom: 1px solid #e8eaed;
 	border-bottom-color: $signature_red;
@@ -30,6 +26,85 @@
 	}
 }
 
+.page-header__bar {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem 1rem;
+	width: 100%;
+	flex-wrap: nowrap;
+	min-width: 0;
+}
+
+.page-header__backdrop {
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: rgba(0, 0, 0, 0.42);
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+
+	.page-header--nav-open & {
+		@media #{$mobile} {
+			display: block;
+		}
+	}
+}
+
+.page-header__drawer {
+	display: none;
+	position: absolute;
+	top: calc(100% + 0.35rem);
+	right: 0;
+	width: min(280px, calc(100vw - #{$page_margin} * 2));
+	padding: 0.5rem 0.75rem 0.85rem;
+	border-radius: 12px;
+	background: $white;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16);
+	z-index: 2;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-6px);
+	pointer-events: none;
+	transition:
+		opacity 0.2s ease,
+		visibility 0.2s ease,
+		transform 0.2s ease;
+
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
+
+	@media #{$mobile} {
+		display: block;
+	}
+
+	&--open {
+		@media #{$mobile} {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+			pointer-events: auto;
+		}
+	}
+}
+
+.page-header__drawer-footer {
+	margin-top: 0.5rem;
+	padding-top: 0.65rem;
+	border-top: 1px solid rgba(0, 0, 0, 0.08);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
 .brand-link {
 	text-decoration: none;
 	color: inherit;
@@ -41,7 +116,17 @@
 
 .page-header__end {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0.5rem 0.75rem;
+	flex: 1;
+	min-width: 0;
+}
+
+.page-header__desktop {
+	display: flex;
+	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: flex-end;
 	gap: 0.75rem 1.25rem;
@@ -49,16 +134,74 @@
 	min-width: 0;
 
 	@media #{$mobile} {
-		width: 100%;
-		justify-content: space-between;
+		display: none;
 	}
 }
 
-.site-nav {
-	display: flex;
-	flex-wrap: wrap;
+.page-header__menu-btn {
+	display: none;
+	flex-shrink: 0;
 	align-items: center;
-	gap: 0.35rem 1rem;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5px;
+	width: 2.65rem;
+	height: 2.65rem;
+	margin: 0;
+	padding: 0;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.03);
+	color: #333;
+	cursor: pointer;
+	transition:
+		background 0.2s ease,
+		border-color 0.2s ease,
+		color 0.2s ease,
+		transform 0.15s ease;
+
+	&:hover {
+		background: rgba(0, 0, 0, 0.06);
+		border-color: rgba(0, 0, 0, 0.18);
+	}
+
+	&:focus-visible {
+		outline: 2px solid $signature_red;
+		outline-offset: 3px;
+	}
+
+	@media #{$mobile} {
+		display: inline-flex;
+	}
+}
+
+.page-header__menu-btn-bar {
+	display: block;
+	width: 18px;
+	height: 2px;
+	border-radius: 1px;
+	background: currentColor;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
+}
+
+.page-header__menu-btn--open .page-header__menu-btn-bar:nth-child(1) {
+	transform: translateY(7px) rotate(45deg);
+}
+
+.page-header__menu-btn--open .page-header__menu-btn-bar:nth-child(2) {
+	opacity: 0;
+	transform: scaleX(0);
+}
+
+.page-header__menu-btn--open .page-header__menu-btn-bar:nth-child(3) {
+	transform: translateY(-7px) rotate(-45deg);
+}
+
+.site-nav {
 	font-size: 0.9rem;
 	font-weight: 500;
 
@@ -74,12 +217,40 @@
 			border-bottom-color: $signature_red;
 		}
 	}
+}
 
-	@media #{$mobile} {
-		flex: 1;
-		min-width: min(100%, 12rem);
-		justify-content: flex-start;
-		row-gap: 0.5rem;
+.site-nav--desktop {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: 0.35rem 1rem;
+	justify-content: flex-end;
+	flex: 1;
+	min-width: 0;
+
+	a {
+		white-space: nowrap;
+		flex-shrink: 0;
+	}
+}
+
+.site-nav--mobile {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 0;
+
+	a {
+		padding: 0.7rem 0.35rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		&:hover {
+			border-bottom-color: rgba($signature_red, 0.35);
+		}
 	}
 }
 
@@ -148,13 +319,11 @@
 		}
 	}
 
-	.resume-hippo-btn {
+	.banner-resume-btn {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		gap: 0.65rem;
-		margin-top: 0.25rem;
-		padding: 0.35rem 1.25rem 0.35rem 0.45rem;
+		padding: 0.65rem 1.5rem;
 		border-radius: 999px;
 		min-height: 3rem;
 		border: 1px solid rgba($signature_red, 0.55);
@@ -184,164 +353,6 @@
 		&:focus-visible {
 			outline: 2px solid $signature_red;
 			outline-offset: 3px;
-		}
-	}
-
-	.resume-hippo-btn__svg-wrap {
-		flex-shrink: 0;
-		line-height: 0;
-		width: 7.25rem;
-		max-width: 42vw;
-
-		@media #{$mobile} {
-			width: 6.25rem;
-		}
-	}
-
-	.resume-hippo-btn__svg {
-		display: block;
-		width: 100%;
-		height: auto;
-	}
-
-	.resume-hippo-btn__label {
-		padding-right: 0.15rem;
-		white-space: nowrap;
-	}
-
-	$t-hippo: 0.34s;
-	$ease-hippo: cubic-bezier(0.33, 1, 0.68, 1);
-
-	.resume-hippo__ear-left-outer,
-	.resume-hippo__ear-right-outer {
-		fill: #919191;
-	}
-
-	.resume-hippo__ear-left-inner,
-	.resume-hippo__ear-right-inner {
-		fill: #6d6d6d;
-	}
-
-	.resume-hippo__eye-right-outer,
-	.resume-hippo__eye-left-outer,
-	.resume-hippo__nostril-right-outer,
-	.resume-hippo__nostril-left-outer,
-	.resume-hippo__body {
-		fill: #aaaaaa;
-	}
-
-	.resume-hippo__eye-right-inner,
-	.resume-hippo__eye-left-inner {
-		fill: #ffffff;
-	}
-
-	.resume-hippo__nostril-right-inner,
-	.resume-hippo__nostril-left-inner {
-		fill: #8c8c8c;
-	}
-
-	.resume-hippo__freckle {
-		fill: #7c7c7c;
-	}
-
-	.resume-hippo__tongue {
-		fill: $signature_red;
-	}
-
-	.resume-hippo__tooth-left,
-	.resume-hippo__tooth-right {
-		fill: #ffffe1;
-	}
-
-	.resume-hippo__eye-left-pupil,
-	.resume-hippo__eye-right-pupil {
-		fill: #2a2a2a;
-		transform-box: fill-box;
-		transform-origin: center center;
-		will-change: transform;
-	}
-
-	.resume-hippo__mouth-pieces,
-	.resume-hippo__teeth,
-	.resume-hippo__body,
-	.resume-hippo__freckles,
-	.resume-hippo__ears,
-	.resume-hippo__eye-right,
-	.resume-hippo__eye-left,
-	.resume-hippo__eyes,
-	.resume-hippo__nostrils {
-		transition: transform $t-hippo $ease-hippo;
-	}
-
-	.resume-hippo__body {
-		transform-origin: center bottom;
-	}
-
-	.resume-hippo__teeth {
-		transform-origin: center bottom;
-	}
-
-	.resume-hippo__ear-right {
-		transform-origin: 190px 19px;
-		animation: resume-hippo-ear-wiggle 4.5s ease-in-out infinite;
-	}
-
-	.resume-hippo-btn:hover .resume-hippo__mouth-pieces,
-	.resume-hippo-btn:focus-visible .resume-hippo__mouth-pieces {
-		transform: translate(0, -70px);
-	}
-
-	.resume-hippo-btn:hover .resume-hippo__teeth,
-	.resume-hippo-btn:focus-visible .resume-hippo__teeth {
-		transform: translate(0, -70px) scaleY(1.18);
-	}
-
-	.resume-hippo-btn:hover .resume-hippo__body,
-	.resume-hippo-btn:focus-visible .resume-hippo__body {
-		transform: scaleY(1.06);
-	}
-
-	.resume-hippo-btn:hover .resume-hippo__freckles,
-	.resume-hippo-btn:focus-visible .resume-hippo__freckles {
-		transform: translate(0, -10px);
-	}
-
-	.resume-hippo-btn:hover .resume-hippo__ears,
-	.resume-hippo-btn:focus-visible .resume-hippo__ears {
-		transform: translate(0, 6px);
-	}
-
-	.resume-hippo-btn:hover .resume-hippo__eye-right,
-	.resume-hippo-btn:focus-visible .resume-hippo__eye-right {
-		transform: translate(-2px, 0);
-	}
-
-	.resume-hippo-btn:hover .resume-hippo__eye-left,
-	.resume-hippo-btn:focus-visible .resume-hippo__eye-left {
-		transform: translate(2px, 0);
-	}
-
-	.resume-hippo-btn:hover .resume-hippo__eyes,
-	.resume-hippo-btn:focus-visible .resume-hippo__eyes {
-		transform: translate(0, 2px);
-	}
-
-	.resume-hippo-btn:hover .resume-hippo__nostrils,
-	.resume-hippo-btn:focus-visible .resume-hippo__nostrils {
-		transform: translate(0, -6px);
-	}
-
-	@keyframes resume-hippo-ear-wiggle {
-		0%,
-		88%,
-		100% {
-			transform: rotate(0deg);
-		}
-		90% {
-			transform: rotate(14deg);
-		}
-		92% {
-			transform: rotate(0deg);
 		}
 	}
 }
@@ -479,19 +490,47 @@
 	width: 100%;
 }
 
-.banner-hero__eyebrow {
-	margin: 0.35rem 0 0;
-	font-size: 0.6875rem;
+.banner-hero__intro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.4rem;
+	margin: 0.2rem 0 0;
+	max-width: min(34rem, 100%);
+	text-align: center;
+}
+
+.banner-hero__job-title {
+	margin: 0;
+	font-size: clamp(1.0625rem, 3.2vw, 1.375rem);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	line-height: 1.32;
+	color: #1a1d24;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 2.75rem;
+		height: 3px;
+		margin: 0.55rem auto 0;
+		border-radius: 999px;
+		background: linear-gradient(90deg, $signature_red, lighten($signature_red, 12%));
+	}
+}
+
+.banner-hero__job-focus {
+	margin: 0;
+	font-size: clamp(0.6875rem, 1.9vw, 0.8125rem);
 	font-weight: 600;
-	letter-spacing: 0.14em;
+	letter-spacing: 0.12em;
 	text-transform: uppercase;
 	color: #5c6370;
 	line-height: 1.45;
 	max-width: 26rem;
 
 	@media #{$mobile} {
-		font-size: 0.625rem;
-		letter-spacing: 0.11em;
+		letter-spacing: 0.09em;
 	}
 }
 
@@ -536,6 +575,41 @@
 }
 
 html[data-theme="dark"] {
+	.page-header__backdrop {
+		background: rgba(0, 0, 0, 0.58);
+	}
+
+	.page-header__menu-btn {
+		border-color: rgba(255, 255, 255, 0.14);
+		background: rgba(255, 255, 255, 0.06);
+		color: #e8eaed;
+
+		&:hover {
+			background: rgba(255, 255, 255, 0.1);
+			border-color: rgba(255, 255, 255, 0.22);
+		}
+	}
+
+	.page-header__drawer {
+		background: linear-gradient(165deg, #1e232c 0%, #181c24 100%);
+		border-color: rgba(255, 255, 255, 0.1);
+		box-shadow: 0 12px 48px rgba(0, 0, 0, 0.45);
+	}
+
+	.page-header__drawer-footer {
+		border-top-color: rgba(255, 255, 255, 0.1);
+	}
+
+	.site-nav--mobile a {
+		color: #c8cdd5;
+		border-bottom-color: rgba(255, 255, 255, 0.08);
+
+		&:hover {
+			color: lighten($signature_red, 8%);
+			border-bottom-color: rgba($signature_red, 0.45);
+		}
+	}
+
 	.banner {
 		background-color: #16191f;
 
@@ -569,7 +643,7 @@ html[data-theme="dark"] {
 			opacity: 0.85;
 		}
 
-		.resume-hippo-btn {
+		.banner-resume-btn {
 			color: lighten($signature_red, 10%);
 			background: rgba($signature_red, 0.12);
 			border-color: rgba($signature_red, 0.45);
@@ -585,15 +659,6 @@ html[data-theme="dark"] {
 				outline-color: lighten($signature_red, 12%);
 			}
 		}
-
-		.resume-hippo__body {
-			fill: #8f9399;
-		}
-
-		.resume-hippo__eye-right-outer,
-		.resume-hippo__eye-left-outer {
-			fill: #9ea3ab;
-		}
 	}
 
 	.banner-hero--panel {
@@ -604,7 +669,16 @@ html[data-theme="dark"] {
 			0 16px 48px rgba(0, 0, 0, 0.35);
 	}
 
-	.banner-hero__eyebrow {
+	.banner-hero__job-title {
+		color: #f4f6f8;
+
+		&::after {
+			background: linear-gradient(90deg, $signature_red, lighten($signature_red, 18%));
+			opacity: 0.95;
+		}
+	}
+
+	.banner-hero__job-focus {
 		color: #9aa3af;
 	}
 
@@ -626,32 +700,7 @@ html[data-theme="dark"] {
 		display: none !important;
 	}
 
-	.banner .resume-hippo-btn:hover {
-		transform: none;
-	}
-
-	.banner .resume-hippo__ear-right {
-		animation: none;
-	}
-
-	.banner .resume-hippo-btn:hover .resume-hippo__mouth-pieces,
-	.banner .resume-hippo-btn:focus-visible .resume-hippo__mouth-pieces,
-	.banner .resume-hippo-btn:hover .resume-hippo__teeth,
-	.banner .resume-hippo-btn:focus-visible .resume-hippo__teeth,
-	.banner .resume-hippo-btn:hover .resume-hippo__body,
-	.banner .resume-hippo-btn:focus-visible .resume-hippo__body,
-	.banner .resume-hippo-btn:hover .resume-hippo__freckles,
-	.banner .resume-hippo-btn:focus-visible .resume-hippo__freckles,
-	.banner .resume-hippo-btn:hover .resume-hippo__ears,
-	.banner .resume-hippo-btn:focus-visible .resume-hippo__ears,
-	.banner .resume-hippo-btn:hover .resume-hippo__eye-right,
-	.banner .resume-hippo-btn:focus-visible .resume-hippo__eye-right,
-	.banner .resume-hippo-btn:hover .resume-hippo__eye-left,
-	.banner .resume-hippo-btn:focus-visible .resume-hippo__eye-left,
-	.banner .resume-hippo-btn:hover .resume-hippo__eyes,
-	.banner .resume-hippo-btn:focus-visible .resume-hippo__eyes,
-	.banner .resume-hippo-btn:hover .resume-hippo__nostrils,
-	.banner .resume-hippo-btn:focus-visible .resume-hippo__nostrils {
+	.banner .banner-resume-btn:hover {
 		transform: none;
 	}
 }
