@@ -21,7 +21,7 @@ class ContactMe extends Component {
             </a>{" "}
             above — open any stop for the full detail.
           </p>
-          <ul className="contact-section__actions" role="list">
+          <ul className="contact-section__actions">
             <li>
               <a
                 href="mailto:iamabinthaha@gmail.com"

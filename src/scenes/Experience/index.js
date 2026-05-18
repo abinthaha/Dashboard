@@ -182,12 +182,6 @@ class Experience extends Component {
     const viewed = this.state.isViewed ? "viewed" : "";
     const lastIndex = CAREER_JOURNEY.length - 1;
 
-    const stats = [
-      { label: "Years", value: experience.year, delay: "0ms" },
-      { label: "Months", value: experience.month, delay: "70ms" },
-      { label: "Days", value: experience.days, delay: "140ms" },
-    ];
-
     return (
       <section
         className={`experience odd ${viewed}`}

@@ -105,9 +105,6 @@ class Banner extends Component {
                 download="Abin Thaha Azees - Resume.pdf"
                 className="banner-hero__cta"
               />
-              <p className="banner-hero__note">
-                Based in Kochi, Kerala · open to remote-friendly roles worldwide.
-              </p>
             </div>
           </section>
         </div>
