@@ -8,9 +8,29 @@ const certItems = [
     itemId: "copilot",
   },
   {
+    id: 7,
+    item: "Databricks Certified Generative AI Engineer Associate",
+    itemId: "databricks",
+  },
+  {
+    id: 8,
+    item: "EY - Artificial Intelligence - AI Engineering - Silver (2025)",
+    itemId: "eyaiengineering",
+  },
+  {
     id: 5,
     item: "Scrum Foundation Professional Certification (SFPC)",
     itemId: "scrum",
+  },
+  {
+    id: 9,
+    item: "EY Innovation - Agile - Silver (2024)",
+    itemId: "eyaiengineering",
+  },
+  {
+    id: 10,
+    item: "EY Data Strategy - Data Platform - Bronze(2021)",
+    itemId: "eyaiengineering",
   },
   {
     id: 1,

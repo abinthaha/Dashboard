@@ -126,6 +126,17 @@ $copilot_color: #238636;
 	background-size: 70%;
 }
 
+.achievement-card__img--databricks {
+	background-image: url("../../assets/images/Achievements/databricks-genai.png");
+}
+
+.achievement-card__img--eyaiengineering {
+	background-image: url("../../assets/images/Achievements/ernstandyoung_logo.jpeg");
+}
+
+.achievement-card__img--ga {
+	background-image: url("../../assets/images/Achievements/Google\ analytics.png");
+}
 .achievement-card__img--ga {
 	background-image: url("../../assets/images/Achievements/Google\ analytics.png");
 }
@@ -147,7 +158,7 @@ $copilot_color: #238636;
 }
 
 .achievement-card__img--copilot {
-	background-image: url("../../assets/images/Achievements/Github-Copilot-GH300.png");
+	background-image: url("../../assets/images/Achievements/badge gh-300.png");
 	background-size: 62%;
 }
 
