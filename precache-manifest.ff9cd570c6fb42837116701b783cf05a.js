@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8ba7c6df4955f41a97ce80b223c696c5",
+    "revision": "cad51680cdba9350d7cf22ce7e895af9",
     "url": "/Dashboard/index.html"
   },
   {
-    "revision": "7b607cf01d3047f2cbea",
-    "url": "/Dashboard/static/css/main.a1fbab1e.chunk.css"
+    "revision": "4165eadbd67f96b16ae4",
+    "url": "/Dashboard/static/css/main.da6b78d5.chunk.css"
   },
   {
     "revision": "a78d4a70967fe14df54f",
     "url": "/Dashboard/static/js/2.04130790.chunk.js"
   },
   {
-    "revision": "7b607cf01d3047f2cbea",
-    "url": "/Dashboard/static/js/main.a10a3f1c.chunk.js"
+    "revision": "4165eadbd67f96b16ae4",
+    "url": "/Dashboard/static/js/main.d5acd7c5.chunk.js"
   },
   {
     "revision": "d8bc9ec02fd6e05b6a8d",
@@ -30,10 +30,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0702ae597631cd0854bc84f6108bc662",
     "url": "/Dashboard/static/media/Bubble.0702ae59.PNG"
-  },
-  {
-    "revision": "10f4422c40c2a7f7b94b36fafa2d0196",
-    "url": "/Dashboard/static/media/Github-Copilot-GH300.10f4422c.png"
   },
   {
     "revision": "3d88b0603551ada3bcd8b160d4c997b5",
@@ -66,6 +62,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d1f5d0dfbdc4ed8d4ea690b1ab76b3ec",
     "url": "/Dashboard/static/media/Why-So-Serious.d1f5d0df.PNG"
+  },
+  {
+    "revision": "55322640b5a44ac2982fed49219faa98",
+    "url": "/Dashboard/static/media/badge gh-300.55322640.png"
+  },
+  {
+    "revision": "33aa92c15aa168e4e7885f38f0934668",
+    "url": "/Dashboard/static/media/databricks-genai.33aa92c1.png"
   },
   {
     "revision": "9edd5810b971c52399438c42c1e5dd58",
